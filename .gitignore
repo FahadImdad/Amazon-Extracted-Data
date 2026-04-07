@@ -1,0 +1,5 @@
+*.log
+__pycache__/
+*.pyc
+data/state_*.json
+scraper_state.json

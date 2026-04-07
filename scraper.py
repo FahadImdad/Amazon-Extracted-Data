@@ -263,7 +263,7 @@ def month_range(from_ym, to_ym):
 
 # ─── CSV Writer ───────────────────────────────────────────────────────────────
 
-FIELDNAMES = ['asin', 'title', 'author', 'publish_date', 'review_count', 'book_format', 'publisher', 'amazon_url']
+FIELDNAMES = ['Total Reviews', 'Product Url', 'ASIN', 'Title', 'Author', 'Format', 'Publication Date', 'Publisher']
 
 def open_csv(path):
     """Open CSV file and return (file_handle, writer, seen_asins)."""
@@ -344,7 +344,16 @@ def scrape(from_ym, to_ym, output_csv, state_file):
 
                 for book in new_books:
                     seen_asins.add(book['asin'])
-                    writer.writerow(book)
+                    writer.writerow({
+                        'Total Reviews':   book['review_count'],
+                        'Product Url':     book['amazon_url'],
+                        'ASIN':            book['asin'],
+                        'Title':           book['title'],
+                        'Author':          book['author'],
+                        'Format':          book['book_format'],
+                        'Publication Date':book['publish_date'],
+                        'Publisher':       book['publisher'],
+                    })
                     slot_books += 1
                     total_saved += 1
 
@@ -391,11 +400,12 @@ def main():
             print(f'Error: {label} must be YYYY-MM format (e.g. 2024-01)')
             sys.exit(1)
 
-    global DELAY_MIN, DELAY_MAX, MAX_PAGES_PER_SLOT, MAX_REVIEWS
-    DELAY_MIN          = args.delay_min
-    DELAY_MAX          = args.delay_max
-    MAX_PAGES_PER_SLOT = args.max_pages
-    MAX_REVIEWS        = args.max_reviews
+    import sys as _sys
+    _mod = _sys.modules[__name__]
+    _mod.DELAY_MIN          = args.delay_min
+    _mod.DELAY_MAX          = args.delay_max
+    _mod.MAX_PAGES_PER_SLOT = args.max_pages
+    _mod.MAX_REVIEWS        = args.max_reviews
 
     scrape(args.from_ym, args.to_ym, args.output, args.state)
 
