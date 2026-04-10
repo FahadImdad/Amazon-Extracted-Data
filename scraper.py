@@ -87,6 +87,55 @@ CATEGORIES = [
     ('173514',     'Law'),
     ('173513',     'Medical'),
     ('298471',     'Music'),
+    # ── Additional subcategories for deeper coverage ──
+    ('1',          'Arts & Entertainment'),
+    ('154606011',  'Cookbooks'),
+    ('16272',      'Crafts & Hobbies'),
+    ('173511',     'Sports & Outdoors'),
+    ('173512',     'Engineering'),
+    ('2',          'Professional & Technical'),
+    ('5',          'Comics & Graphic Novels'),
+    ('25',         'Foreign Language Study'),
+    ('86',         'Gay & Lesbian'),
+    ('10777',      'LGBTQ+ Books'),
+    ('4951',       'Humor & Entertainment'),
+    ('4956',       'Poetry'),
+    ('4963',       'Reference'),
+    ('4967',       'Test Preparation'),
+    ('17',         'Drama'),
+    ('4686',       'Architecture'),
+    ('16',         'Short Stories'),
+    ('156',        'Anthologies'),
+    ('4961',       'Photography'),
+    ('4962',       'Design'),
+    ('2686',       'Mind Body Spirit'),
+    ('2701',       'Social Sciences'),
+    ('173516',     'Philosophy'),
+    ('173517',     'Linguistics'),
+    ('17401',      'Folklore & Mythology'),
+    ('3149',       'Military History'),
+    ('3150',       'Ancient History'),
+    ('3151',       'World History'),
+    ('13996',      'True Crime'),
+    ('3441',       'Nursing'),
+    ('3444',       'Dentistry'),
+    ('3446',       'Veterinary'),
+    ('3448',       'Psychology'),
+    ('3454',       'Psychiatry'),
+    ('3461',       'Alternative Medicine'),
+    ('3464',       'Fitness & Exercise'),
+    ('3465',       'Diets & Weight Loss'),
+    ('173505',     'Accounting'),
+    ('173506',     'Economics'),
+    ('13690811', 'Real Estate'),
+    ('2693',       'Human Resources'),
+    ('2694',       'Project Management'),
+    ('2695',       'Small Business'),
+    ('2696',       'Sales & Selling'),
+    ('2697',       'Strategic Planning'),
+    ('2698',       'Business Writing'),
+    ('2699',       'Industrial Relations'),
+    ('2700',       'Job Hunting'),
 ]
 
 MAX_PAGES_PER_SLOT = 5   # Pages per category/format/month combo
@@ -143,9 +192,21 @@ def parse_html(html, expected_format):
             if author.lower() in ('unknown', ''):
                 continue
 
-            # Publication date
-            date_el = item.select_one('.a-color-secondary .a-size-base') or item.select_one('[class*="publication"]')
-            pub_date = date_el.get_text(strip=True) if date_el else ''
+            # Publication date — search for date pattern in item text
+            pub_date = ''
+            item_text_raw = item.get_text(' ', strip=True)
+            item_text_norm = re.sub(r'\s+', ' ', item_text_raw.replace('\u200f', ' ').replace('\xa0', ' ')).strip()
+            # Match patterns like "Jan 1, 2023", "January 2023", "2023-01-01"
+            date_match = re.search(
+                r'((?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|'
+                r'Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)'
+                r'[\s,.]+\d{1,2}[,\s]+\d{4}|\d{1,2}\s+(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|'
+                r'Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|'
+                r'Nov(?:ember)?|Dec(?:ember)?)\s+\d{4}|\d{4}-\d{2}-\d{2})',
+                item_text_norm, re.IGNORECASE
+            )
+            if date_match:
+                pub_date = date_match.group(1).strip()
 
             # Review count
             review_el = item.select_one('[aria-label*="ratings"]') or item.select_one('[aria-label*="stars"]')
@@ -161,7 +222,7 @@ def parse_html(html, expected_format):
                 continue
 
             # Format detection
-            item_text = item.get_text()
+            item_text = item.get_text(' ', strip=True)
             fmt = 'Unknown'
             if 'Audiobook' in item_text or 'Audible' in item_text:
                 fmt = 'Audiobook'
@@ -178,11 +239,16 @@ def parse_html(html, expected_format):
             if fmt == 'Audiobook':
                 continue
 
-            # Publisher (try to find in item text)
+            # Publisher — search for publisher info in item text
             publisher = ''
-            pub_match = re.search(r'(?:Publisher|Published by)[:\s]+([A-Za-z][^\n]{2,50})', item_text)
+            pub_match = re.search(
+                r'(?:Publisher|Published by|Pub(?:\.|lisher)?)\s*[:\-]?\s*([^\|\n]{2,80})',
+                item_text_norm, re.IGNORECASE
+            )
             if pub_match:
-                publisher = pub_match.group(1).strip()[:60]
+                publisher = pub_match.group(1).strip()[:80]
+                publisher = re.sub(r'\s{2,}', ' ', publisher)
+                publisher = re.sub(r'\b(?:Paperback|Hardcover|Kindle|Audiobook|Edition|Reviewed in|out of)\b.*$', '', publisher, flags=re.I).strip(' ,;:-')
 
             books.append({
                 'asin':         asin,
