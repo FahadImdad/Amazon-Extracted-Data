@@ -21,6 +21,8 @@ import json
 import logging
 from datetime import datetime
 from itertools import product
+from collections import deque
+from urllib.parse import unquote, urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -87,12 +89,62 @@ CATEGORIES = [
     ('173514',     'Law'),
     ('173513',     'Medical'),
     ('298471',     'Music'),
+    # ── Additional subcategories for deeper coverage ──
+    ('1',          'Arts & Entertainment'),
+    ('154606011',  'Cookbooks'),
+    ('16272',      'Crafts & Hobbies'),
+    ('173511',     'Sports & Outdoors'),
+    ('173512',     'Engineering'),
+    ('2',          'Professional & Technical'),
+    ('5',          'Comics & Graphic Novels'),
+    ('25',         'Foreign Language Study'),
+    ('86',         'Gay & Lesbian'),
+    ('10777',      'LGBTQ+ Books'),
+    ('4951',       'Humor & Entertainment'),
+    ('4956',       'Poetry'),
+    ('4963',       'Reference'),
+    ('4967',       'Test Preparation'),
+    ('17',         'Drama'),
+    ('4686',       'Architecture'),
+    ('16',         'Short Stories'),
+    ('156',        'Anthologies'),
+    ('4961',       'Photography'),
+    ('4962',       'Design'),
+    ('2686',       'Mind Body Spirit'),
+    ('2701',       'Social Sciences'),
+    ('173516',     'Philosophy'),
+    ('173517',     'Linguistics'),
+    ('17401',      'Folklore & Mythology'),
+    ('3149',       'Military History'),
+    ('3150',       'Ancient History'),
+    ('3151',       'World History'),
+    ('13996',      'True Crime'),
+    ('3441',       'Nursing'),
+    ('3444',       'Dentistry'),
+    ('3446',       'Veterinary'),
+    ('3448',       'Psychology'),
+    ('3454',       'Psychiatry'),
+    ('3461',       'Alternative Medicine'),
+    ('3464',       'Fitness & Exercise'),
+    ('3465',       'Diets & Weight Loss'),
+    ('173505',     'Accounting'),
+    ('173506',     'Economics'),
+    ('13690811', 'Real Estate'),
+    ('2693',       'Human Resources'),
+    ('2694',       'Project Management'),
+    ('2695',       'Small Business'),
+    ('2696',       'Sales & Selling'),
+    ('2697',       'Strategic Planning'),
+    ('2698',       'Business Writing'),
+    ('2699',       'Industrial Relations'),
+    ('2700',       'Job Hunting'),
 ]
 
-MAX_PAGES_PER_SLOT = 5   # Pages per category/format/month combo
+MAX_PAGES_PER_SLOT = 0   # 0 = unlimited pages per category/format/month combo
 MAX_REVIEWS        = 5   # Skip books with more than this many reviews
 DELAY_MIN          = 1.5 # Min seconds between requests
 DELAY_MAX          = 3.5 # Max seconds between requests
+DISCOVER_DEPTH     = 2   # 0 = seed categories only
 
 USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -112,6 +164,49 @@ def build_url(cat_id, format_code, month, year, page=1):
         f"&s=date-desc-rank&p_45={month}&p_46=During&p_47={year}"
         f"&page={page}&unfiltered=1&ref=sr_adv_b"
     )
+
+def build_seed_url(cat_id):
+    return f"https://www.amazon.com/s?i=stripbooks&rh=n%3A{cat_id}&s=featured-rank&ref=sr_pg_1"
+
+def extract_nodes(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    found = {}
+    for a in soup.select('a[href]'):
+        href = a.get('href', '')
+        text = a.get_text(' ', strip=True)
+        if not href:
+            continue
+        full = urljoin('https://www.amazon.com', href)
+        decoded = unquote(full)
+        for match in re.finditer(r'(?:[?&]|rh=|/|^)n:?([0-9]{2,})', decoded):
+            node_id = match.group(1)
+            if node_id:
+                found[node_id] = text[:120] if text else f'Node {node_id}'
+        rh_match = re.search(r'rh=[^\s]*n:([0-9]{2,})', decoded)
+        if rh_match:
+            found[rh_match.group(1)] = text[:120] if text else f'Node {rh_match.group(1)}'
+    return found
+
+def discover_categories(depth=2):
+    seed = {cat_id: name for cat_id, name in CATEGORIES}
+    queue = deque((cat_id, name, 0) for cat_id, name in CATEGORIES)
+    seen = set(seed.keys())
+    discovered = {cat_id: name for cat_id, name in CATEGORIES}
+    while queue:
+        node_id, name, level = queue.popleft()
+        if level >= depth:
+            continue
+        html = fetch_page(build_seed_url(node_id))
+        if not html:
+            continue
+        for child_id, child_name in extract_nodes(html).items():
+            if child_id in seen:
+                continue
+            seen.add(child_id)
+            discovered[child_id] = child_name or f'Node {child_id}'
+            queue.append((child_id, child_name or f'Node {child_id}', level + 1))
+        time.sleep(random.uniform(1.0, 2.0))
+    return list(discovered.items())
 
 # ─── HTML Parser ──────────────────────────────────────────────────────────────
 
@@ -143,9 +238,21 @@ def parse_html(html, expected_format):
             if author.lower() in ('unknown', ''):
                 continue
 
-            # Publication date
-            date_el = item.select_one('.a-color-secondary .a-size-base') or item.select_one('[class*="publication"]')
-            pub_date = date_el.get_text(strip=True) if date_el else ''
+            # Publication date — search for date pattern in item text
+            pub_date = ''
+            item_text_raw = item.get_text(' ', strip=True)
+            item_text_norm = re.sub(r'\s+', ' ', item_text_raw.replace('\u200f', ' ').replace('\xa0', ' ')).strip()
+            # Match patterns like "Jan 1, 2023", "January 2023", "2023-01-01"
+            date_match = re.search(
+                r'((?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|'
+                r'Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)'
+                r'[\s,.]+\d{1,2}[,\s]+\d{4}|\d{1,2}\s+(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|'
+                r'Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|'
+                r'Nov(?:ember)?|Dec(?:ember)?)\s+\d{4}|\d{4}-\d{2}-\d{2})',
+                item_text_norm, re.IGNORECASE
+            )
+            if date_match:
+                pub_date = date_match.group(1).strip()
 
             # Review count
             review_el = item.select_one('[aria-label*="ratings"]') or item.select_one('[aria-label*="stars"]')
@@ -161,7 +268,7 @@ def parse_html(html, expected_format):
                 continue
 
             # Format detection
-            item_text = item.get_text()
+            item_text = item.get_text(' ', strip=True)
             fmt = 'Unknown'
             if 'Audiobook' in item_text or 'Audible' in item_text:
                 fmt = 'Audiobook'
@@ -178,11 +285,16 @@ def parse_html(html, expected_format):
             if fmt == 'Audiobook':
                 continue
 
-            # Publisher (try to find in item text)
+            # Publisher — search for publisher info in item text
             publisher = ''
-            pub_match = re.search(r'(?:Publisher|Published by)[:\s]+([A-Za-z][^\n]{2,50})', item_text)
+            pub_match = re.search(
+                r'(?:Publisher|Published by|Pub(?:\.|lisher)?)\s*[:\-]?\s*([^\|\n]{2,80})',
+                item_text_norm, re.IGNORECASE
+            )
             if pub_match:
-                publisher = pub_match.group(1).strip()[:60]
+                publisher = pub_match.group(1).strip()[:80]
+                publisher = re.sub(r'\s{2,}', ' ', publisher)
+                publisher = re.sub(r'\b(?:Paperback|Hardcover|Kindle|Audiobook|Edition|Reviewed in|out of)\b.*$', '', publisher, flags=re.I).strip(' ,;:-')
 
             books.append({
                 'asin':         asin,
@@ -299,12 +411,13 @@ def save_state(state_file, state):
 def scrape(from_ym, to_ym, output_csv, state_file):
     months    = month_range(from_ym, to_ym)
     formats   = [(name, FORMAT_CODES[name]) for name in TARGET_FORMATS]
-    cats      = CATEGORIES
+    cats      = discover_categories(DISCOVER_DEPTH) if DISCOVER_DEPTH > 0 else CATEGORIES
 
     total_slots = len(months) * len(cats) * len(formats)
     log.info(f'📚 Scraping {from_ym} → {to_ym}')
+    pages_msg = 'unlimited' if MAX_PAGES_PER_SLOT == 0 else str(MAX_PAGES_PER_SLOT)
     log.info(f'📅 {len(months)} months × {len(cats)} categories × {len(formats)} formats = {total_slots} slots')
-    log.info(f'📄 Up to {MAX_PAGES_PER_SLOT} pages/slot = {total_slots * MAX_PAGES_PER_SLOT * 20:,} max books')
+    log.info(f'📄 Pages/slot = {pages_msg}')
 
     fh, writer, seen_asins = open_csv(output_csv)
     state = load_state(state_file)
@@ -324,7 +437,10 @@ def scrape(from_ym, to_ym, output_csv, state_file):
             log.info(f'📂 Slot {slot_num}/{total_slots}: {slot_label}')
 
             slot_books = 0
-            for page in range(1, MAX_PAGES_PER_SLOT + 1):
+            page = 1
+            while True:
+                if MAX_PAGES_PER_SLOT and page > MAX_PAGES_PER_SLOT:
+                    break
                 url = build_url(cat_id, fmt_code, month, year, page)
                 html = fetch_page(url)
 
@@ -365,6 +481,7 @@ def scrape(from_ym, to_ym, output_csv, state_file):
                     break
 
                 time.sleep(random.uniform(DELAY_MIN, DELAY_MAX))
+                page += 1
 
             # Save state after each slot
             save_state(state_file, {'slot': slot_num})
@@ -389,8 +506,9 @@ def main():
     parser.add_argument('--state',  default='scraper_state.json',  help='State file for resuming (default: scraper_state.json)')
     parser.add_argument('--delay-min', type=float, default=DELAY_MIN, help='Min delay between requests (seconds)')
     parser.add_argument('--delay-max', type=float, default=DELAY_MAX, help='Max delay between requests (seconds)')
-    parser.add_argument('--max-pages', type=int,   default=MAX_PAGES_PER_SLOT, help='Max pages per slot (default: 5)')
+    parser.add_argument('--max-pages', type=int,   default=MAX_PAGES_PER_SLOT, help='Max pages per slot (default: 0 = unlimited)')
     parser.add_argument('--max-reviews', type=int, default=MAX_REVIEWS, help='Skip books with more reviews than this (default: 5)')
+    parser.add_argument('--discover-depth', type=int, default=DISCOVER_DEPTH, help='Category discovery depth from seed nodes (default: 2)')
 
     args = parser.parse_args()
 
@@ -406,6 +524,7 @@ def main():
     _mod.DELAY_MAX          = args.delay_max
     _mod.MAX_PAGES_PER_SLOT = args.max_pages
     _mod.MAX_REVIEWS        = args.max_reviews
+    _mod.DISCOVER_DEPTH     = args.discover_depth
 
     scrape(args.from_ym, args.to_ym, args.output, args.state)
 
