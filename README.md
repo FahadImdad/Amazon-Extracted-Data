@@ -1,7 +1,7 @@
 # Amazon Bulk Book Scraper
 
-Scrapes Amazon Advanced Search by month/year range and saves raw book data to CSV.  
-No email finding — just cheap bulk data collection.
+Scrapes Amazon Advanced Search by month/year range and saves raw book data to CSV.
+No email finding, just bulk data collection.
 
 ## Setup
 
@@ -36,8 +36,9 @@ python scraper.py --from 2025-06 --to 2025-06 --output books_jun2025.csv
 | `--state` | scraper_state.json | State file for resuming |
 | `--delay-min` | 1.5 | Min seconds between requests |
 | `--delay-max` | 3.5 | Max seconds between requests |
-| `--max-pages` | 5 | Max pages per category/format/month slot |
+| `--max-pages` | 0 | Max pages per category/format/month slot, 0 = unlimited |
 | `--max-reviews` | 5 | Skip books with more reviews than this |
+| `--discover-depth` | 2 | Recursive category discovery depth |
 
 ## Resume
 
@@ -47,22 +48,20 @@ If interrupted, just run the same command again — it resumes from where it lef
 
 | Column | Description |
 |--------|-------------|
-| asin | Amazon ASIN |
-| title | Book title |
-| author | Author name |
-| publish_date | Publication date string |
-| review_count | Number of reviews |
-| book_format | Paperback / Hardcover / Kindle |
-| publisher | Publisher name (if found) |
-| amazon_url | Full Amazon URL |
+| Total Reviews | Number of reviews |
+| Product Url | Full Amazon URL |
+| ASIN | Amazon ASIN |
+| Title | Book title |
+| Author | Author name |
+| Format | Paperback / Hardcover / Kindle |
+| Publication Date | Publication date string |
+| Publisher | Publisher name (if found) |
 
 ## Scale estimate (2020–2025)
 
 - 6 years × 12 months = 72 months
-- × 38 categories × 3 formats = **8,208 slots**
-- × 5 pages × ~20 books = **~820,000 books max**
-- Filtered to ≤5 reviews → **~50,000–100,000 qualified leads**
-- At ~2 sec/request → ~16,000 seconds (~4-5 hours total)
+- recursive categories × 3 formats × unlimited pages until exhaustion
+- output is deduped by ASIN per monthly CSV
 
 ## Cost
 

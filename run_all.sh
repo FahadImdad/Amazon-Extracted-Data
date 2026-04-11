@@ -1,13 +1,13 @@
 #!/bin/bash
 # Runs scraper month by month — each month gets its own CSV file
-# Max pages = 20 (Amazon's hard limit per category/format/month slot)
+# Pages are unlimited by default in scraper.py (it stops when results end)
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 OUTPUT_DIR="$SCRIPT_DIR/data"
 mkdir -p "$OUTPUT_DIR"
 
 FROM_YEAR=2021
-TO_YEAR=2025
+TO_YEAR=2026
 
 for year in $(seq $FROM_YEAR $TO_YEAR); do
   for month in $(seq -w 1 12); do
@@ -31,7 +31,6 @@ for year in $(seq $FROM_YEAR $TO_YEAR); do
       --to "$YM" \
       --output "$OUT" \
       --state "$STATE" \
-      --max-pages 20 \
       --max-reviews 5 \
       --delay-min 1.0 \
       --delay-max 2.5
