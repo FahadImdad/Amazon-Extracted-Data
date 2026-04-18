@@ -319,14 +319,16 @@ def parse_books(html, fmt_name):
             continue
     return books
 
-def scrape_month(year, month, cats, out_csv, state_file, num_workers=SCRAPE_WORKERS):
+def scrape_month(year, month, cats, out_csv, state_file,
+                 num_workers=SCRAPE_WORKERS, pub_queue=None):
+    """Scrape all slots in parallel. If pub_queue given, feed ASINs live for
+    concurrent publisher enrichment instead of waiting until scraping is done."""
     state_path = Path(state_file)
     done       = set(json.loads(state_path.read_text()).get('done', [])) if state_path.exists() else set()
     done_lock  = threading.Lock()
     seen       = set()
     seen_lock  = threading.Lock()
     csv_lock   = threading.Lock()
-    total_lock = threading.Lock()
     total      = [0]
 
     if out_csv.exists():
@@ -334,6 +336,9 @@ def scrape_month(year, month, cats, out_csv, state_file, num_workers=SCRAPE_WORK
             for row in csv.DictReader(f):
                 if row.get('ASIN'):
                     seen.add(row['ASIN'])
+                    # already in CSV — mark publisher as already queued
+                    if pub_queue is not None and not row.get('Publisher'):
+                        pub_queue.put(row['ASIN'])
 
     slots_all  = [(cat_id, cat_name, fmt_name, fmt_code)
                   for cat_id, cat_name in cats
@@ -342,17 +347,16 @@ def scrape_month(year, month, cats, out_csv, state_file, num_workers=SCRAPE_WORK
                   if f'{cid}:{fn}' not in done]
 
     print(f'\n[SCRAPE] {year}-{month:02d} | {len(cats)} cats | {len(slots_all)} slots | '
-          f'{len(slots_all)-len(slots_todo)} already done | {num_workers} workers', flush=True)
+          f'{len(slots_all)-len(slots_todo)} already done | {num_workers} workers '
+          f'| pub_parallel={"yes" if pub_queue else "no"}', flush=True)
 
     completed = [0]
 
     def scrape_slot(cat_id, cat_name, fmt_name, fmt_code):
-        session = requests.Session()
-        page    = 1
+        page     = 1
         slot_new = 0
         while True:
-            url  = search_url(cat_id, fmt_code, month, year, page)
-            html = get(url)
+            html = get(search_url(cat_id, fmt_code, month, year, page))
             if not html:
                 break
             books = parse_books(html, fmt_name)
@@ -363,9 +367,12 @@ def scrape_month(year, month, cats, out_csv, state_file, num_workers=SCRAPE_WORK
             if new:
                 with csv_lock:
                     _append(out_csv, new)
-                with total_lock:
-                    total[0] += len(new)
-                    slot_new += len(new)
+                total[0] += len(new)
+                slot_new += len(new)
+                # Feed ASINs to publisher workers immediately
+                if pub_queue is not None:
+                    for b in new:
+                        pub_queue.put(b['ASIN'])
             if not has_next(html):
                 break
             time.sleep(random.uniform(*SCRAPE_DELAY))
@@ -380,8 +387,8 @@ def scrape_month(year, month, cats, out_csv, state_file, num_workers=SCRAPE_WORK
                 state_path.write_text(json.dumps({'done': list(done)}))
 
         if slot_new > 0:
-            print(f'  [{c}/{len(slots_todo)}] {cat_name[:22]}/{fmt_name}: '
-                  f'+{slot_new} (grand={total[0]})', flush=True)
+            print(f'  [scrape {c}/{len(slots_todo)}] {cat_name[:22]}/{fmt_name}: '
+                  f'+{slot_new} books (total={total[0]})', flush=True)
 
     with ThreadPoolExecutor(max_workers=num_workers) as ex:
         futures = [ex.submit(scrape_slot, *s) for s in slots_todo]
@@ -473,50 +480,82 @@ def pub_worker(wq, rq, delay):
         wq.task_done()
         time.sleep(random.uniform(delay * 0.8, delay * 1.3))
 
-def enrich_publishers(csv_path, num_workers, delay):
-    rows = []
-    with open(csv_path, newline='', encoding='utf-8') as f:
-        rows = [{k: (r.get(k) or '').strip() for k in FIELDNAMES} for r in csv.DictReader(f)]
+def enrich_publishers_parallel(csv_path, num_workers, delay, ext_queue=None):
+    """
+    Enrich publisher column.
+    ext_queue: if given, read ASINs from this live queue (fed by scraper).
+               Runs until ext_queue is marked done (sentinel=None received).
+    If ext_queue is None: one-shot mode — reads CSV and enriches missing rows.
+    """
+    pub_results = {}   # asin -> publisher
+    csv_lock    = threading.Lock()
+    result_lock = threading.Lock()
+    fetched     = [0]
 
-    need = [r['ASIN'] for r in rows if r['ASIN'] and not r.get('Publisher')]
-    print(f'\n[PUB] {len(rows)} rows | {len(need)} need publisher fetch', flush=True)
+    def worker_fn(wq):
+        while True:
+            asin = wq.get()
+            if asin is None:
+                wq.task_done()
+                break
+            pub = fetch_publisher(asin)
+            with result_lock:
+                pub_results[asin] = pub
+                fetched[0] += 1
+                if fetched[0] % 50 == 0:
+                    save_pub_cache()
+                    _flush_publishers(csv_path, pub_results, csv_lock)
+            print(f'  [pub {fetched[0]}] {asin}: {pub or "(not found)"}', flush=True)
+            wq.task_done()
+            time.sleep(random.uniform(delay * 0.8, delay * 1.3))
 
-    if not need:
-        print('[PUB] All publishers already filled', flush=True)
-        return
+    if ext_queue is not None:
+        # Parallel mode: drain live queue fed by scraper
+        wq = ext_queue
+        threads = [threading.Thread(target=worker_fn, args=(wq,), daemon=True)
+                   for _ in range(num_workers)]
+        for t in threads:
+            t.start()
+        for t in threads:
+            t.join()
+    else:
+        # One-shot mode: enrich what's missing in CSV
+        rows = []
+        with open(csv_path, newline='', encoding='utf-8') as f:
+            rows = [{k: (r.get(k) or '').strip() for k in FIELDNAMES} for r in csv.DictReader(f)]
+        need = [r['ASIN'] for r in rows if r['ASIN'] and not r.get('Publisher')]
+        print(f'\n[PUB] One-shot: {len(need)} ASINs to fetch', flush=True)
+        if not need:
+            return
+        wq = queue.Queue()
+        for asin in need:
+            wq.put(asin)
+        for _ in range(num_workers):
+            wq.put(None)
+        threads = [threading.Thread(target=worker_fn, args=(wq,), daemon=True)
+                   for _ in range(num_workers)]
+        for t in threads:
+            t.start()
+        for t in threads:
+            t.join()
 
-    wq = queue.Queue()
-    rq = queue.Queue()
-    for asin in need:
-        wq.put(asin)
-    for _ in range(num_workers):
-        wq.put(None)
-
-    threads = [threading.Thread(target=pub_worker, args=(wq, rq, delay), daemon=True)
-               for _ in range(num_workers)]
-    for t in threads:
-        t.start()
-
-    by_asin  = {r['ASIN']: r for r in rows}
-    fetched  = 0
-    total    = len(need)
-
-    while fetched < total:
-        asin, pub = rq.get()
-        if asin in by_asin:
-            by_asin[asin]['Publisher'] = pub
-        fetched += 1
-        print(f'  [{fetched}/{total}] {asin}: {pub or "(not found)"}', flush=True)
-        if fetched % 100 == 0:
-            save_pub_cache()
-            _write_csv(csv_path, rows)
-
-    for t in threads:
-        t.join()
     save_pub_cache()
-    _write_csv(csv_path, rows)
-    filled = sum(1 for r in rows if r.get('Publisher'))
-    print(f'[PUB] Done: {filled}/{len(rows)} rows have Publisher', flush=True)
+    _flush_publishers(csv_path, pub_results, csv_lock)
+    print(f'\n[PUB] Done: {fetched[0]} publishers fetched', flush=True)
+
+def _flush_publishers(csv_path, pub_results, lock):
+    """Write publisher results back into the CSV."""
+    if not csv_path.exists() or not pub_results:
+        return
+    with lock:
+        rows = []
+        with open(csv_path, newline='', encoding='utf-8') as f:
+            rows = [{k: (r.get(k) or '').strip() for k in FIELDNAMES} for r in csv.DictReader(f)]
+        for row in rows:
+            asin = row.get('ASIN', '')
+            if asin in pub_results and not row.get('Publisher'):
+                row['Publisher'] = pub_results[asin]
+        _write_csv(csv_path, rows)
 
 def _write_csv(path, rows):
     with open(path, 'w', newline='', encoding='utf-8') as f:
@@ -570,12 +609,31 @@ def main():
     cats = discover_categories()
     print(f'[CONFIG] {len(cats)} categories × 3 formats × all pages\n', flush=True)
 
-    # Step 2: Scrape
-    scrape_month(year, month, cats, csv_p, str(state), num_workers=args.scrape_workers)
-
-    # Step 3: Enrich publisher
     load_pub_cache()
-    enrich_publishers(csv_p, args.workers, args.pub_delay)
+
+    # Shared live queue: scraper feeds ASINs → publisher workers fetch in parallel
+    live_q = queue.Queue()
+
+    # Step 2+3: Scrape AND enrich publisher simultaneously
+    print('[PIPELINE] Scraping + Publisher enrichment running in parallel\n', flush=True)
+
+    pub_thread = threading.Thread(
+        target=enrich_publishers_parallel,
+        args=(csv_p, args.workers, args.pub_delay, live_q),
+        daemon=True
+    )
+    pub_thread.start()
+
+    scrape_month(year, month, cats, csv_p, str(state),
+                 num_workers=args.scrape_workers, pub_queue=live_q)
+
+    # Signal publisher workers that scraping is done
+    for _ in range(args.workers):
+        live_q.put(None)
+    pub_thread.join()
+
+    # Final flush to make sure all publishers are written
+    _flush_publishers(csv_p, {}, threading.Lock())
 
     # Step 4: Push to GitHub
     if not args.no_push:
