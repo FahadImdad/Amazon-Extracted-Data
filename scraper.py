@@ -46,96 +46,310 @@ TARGET_FORMATS = ['Paperback', 'Hardcover', 'Kindle']
 FIELDNAMES = ['Total Reviews', 'Product Url', 'ASIN', 'Title', 'Author', 'Format', 'Publication Date', 'Publisher']
 
 SEED_CATEGORIES = [
+    # ── Business & Money ──────────────────────────────────────────────────────
     ('2635',       'Business & Money'),
-    ('4736',       'Self Help'),
-    ('6',          'Health, Fitness & Dieting'),
-    ('486994011',  'Biographies & Memoirs'),
-    ('22',         'Religion & Spirituality'),
-    ('4919',       'Parenting & Relationships'),
-    ('75',         'Science & Math'),
-    ('9',          'History'),
-    ('11232',      'Politics & Social Sciences'),
-    ('2642',       'Travel'),
-    ('4677',       'Education & Teaching'),
-    ('3',          "Children's Books"),
-    ('4',          'Computers & Technology'),
-    ('173507',     'Arts & Photography'),
-    ('3510',       'Romance'),
     ('2501',       'Entrepreneurship'),
     ('2579',       'Leadership'),
     ('2558',       'Marketing & Sales'),
     ('2533',       'Investing'),
     ('2531',       'Personal Finance'),
+    ('173505',     'Accounting'),
+    ('173506',     'Economics'),
+    ('13690811',   'Real Estate'),
+    ('2693',       'Human Resources'),
+    ('2694',       'Project Management'),
+    ('2695',       'Small Business'),
+    ('2696',       'Sales & Selling'),
+    ('2697',       'Strategic Planning'),
+    ('2699',       'Industrial Relations'),
+    ('2700',       'Job Hunting'),
+    ('2556',       'Management'),
+    ('2557',       'Business Ethics'),
+    ('2559',       'Advertising'),
+    ('2560',       'E-Commerce'),
+    ('2561',       'Nonprofit'),
+    ('2562',       'International Business'),
+    ('2563',       'Business Law'),
+    ('2564',       'Industries'),
+    ('2565',       'Insurance'),
+    ('2566',       'Statistics'),
+    ('2567',       'Finance'),
+    ('2568',       'Taxation'),
+    ('2569',       'Negotiating'),
+    ('2570',       'Training'),
+    ('2571',       'Business Writing'),
+    ('2572',       'Women in Business'),
+    # ── Self Help ─────────────────────────────────────────────────────────────
+    ('4736',       'Self Help'),
     ('4507',       'Motivational'),
     ('4734',       'Anxiety & Phobias'),
     ('4744',       'Relationships'),
+    ('4740',       'Communication Skills'),
+    ('4741',       'Creativity'),
+    ('4742',       'Dreams'),
+    ('4749',       'Personal Transformation'),
+    ('4750',       'Self-Esteem'),
+    ('4752',       'Stress Management'),
+    ('4753',       'Success'),
+    ('4754',       'Time Management'),
+    ('4755',       'Happiness'),
+    ('4756',       'Emotional Intelligence'),
+    ('4757',       'Memory Improvement'),
+    # ── Health & Fitness ──────────────────────────────────────────────────────
+    ('6',          'Health, Fitness & Dieting'),
     ('10',         'Diet & Weight Loss'),
     ('12',         'Mental & Emotional Health'),
-    ('12290',      'Christianity'),
-    ('12293',      'Islam'),
-    ('12291',      'Spirituality'),
-    ('10672',      'Literature & Fiction'),
-    ('49',         'Mystery, Thriller & Suspense'),
-    ('48',         'Science Fiction & Fantasy'),
-    ('47',         'Fantasy'),
-    ('695398',     'Historical Fiction'),
-    ('700200',     'Memoirs'),
-    ('28',         'Teen & Young Adult'),
-    ('173514',     'Law'),
-    ('173513',     'Medical Books'),
-    ('298471',     'Arts & Music'),
-    ('1',          'Audible Books & Originals'),
-    ('154606011',  'Cookbooks, Food & Wine'),
-    ('16272',      'Crafts, Hobbies & Home'),
-    ('173511',     'Sports & Outdoors'),
-    ('173512',     'Engineering & Transportation'),
-    ('2',          'Professional & Technical'),
-    ('5',          'Comics & Graphic Novels'),
-    ('25',         'Foreign Language Study'),
-    ('86',         'Gay & Lesbian'),
-    ('4951',       'Humor & Entertainment'),
-    ('4956',       'Poetry'),
-    ('4963',       'Reference'),
-    ('4967',       'Test Preparation'),
-    ('17',         'Drama'),
-    ('4686',       'Architecture'),
-    ('16',         'Short Stories'),
-    ('4961',       'Photography'),
-    ('4962',       'Design'),
-    ('2686',       'Mind, Body & Spirit'),
-    ('2701',       'Social Sciences'),
-    ('173516',     'Philosophy'),
-    ('173517',     'Linguistics'),
-    ('17401',      'Folklore & Mythology'),
-    ('3149',       'Military History'),
-    ('3150',       'Ancient History'),
-    ('3151',       'World History'),
-    ('13996',      'True Crime'),
     ('3441',       'Nursing'),
     ('3448',       'Psychology & Counseling'),
     ('3454',       'Psychiatry'),
     ('3461',       'Alternative Medicine'),
     ('3464',       'Exercise & Fitness'),
     ('3465',       'Diets & Weight Loss'),
-    ('173505',     'Accounting'),
-    ('173506',     'Economics'),
-    ('13690811',   'Real Estate'),
-    ('2693',       'Human Resources & Personnel Management'),
-    ('2694',       'Project Management'),
-    ('2695',       'Small Business & Entrepreneurship'),
-    ('2696',       'Sales & Selling'),
-    ('2697',       'Strategic Planning'),
-    ('2699',       'Industrial Relations'),
-    ('2700',       'Job Hunting'),
+    ('3466',       'Nutrition'),
+    ('3467',       'Diseases & Physical Ailments'),
+    ('3468',       'Beauty & Grooming'),
+    ('3469',       'Womens Health'),
+    ('3470',       'Mens Health'),
+    ('3471',       'Childrens Health'),
+    ('3472',       'Addiction & Recovery'),
+    ('3473',       'Death & Grief'),
+    ('3474',       'Safety & First Aid'),
+    # ── Religion & Spirituality ───────────────────────────────────────────────
+    ('22',         'Religion & Spirituality'),
+    ('12290',      'Christianity'),
+    ('12293',      'Islam'),
+    ('12291',      'Spirituality'),
+    ('12292',      'Judaism'),
+    ('12294',      'Buddhism'),
+    ('12295',      'Hinduism'),
+    ('12296',      'New Age'),
+    ('12297',      'Other Religions'),
+    ('12298',      'Occult & Paranormal'),
+    ('12299',      'Religious Studies'),
+    ('2686',       'Mind, Body & Spirit'),
+    # ── Biographies & Memoirs ─────────────────────────────────────────────────
+    ('486994011',  'Biographies & Memoirs'),
+    ('700200',     'Memoirs'),
+    ('17401',      'Folklore & Mythology'),
+    # ── History ───────────────────────────────────────────────────────────────
+    ('9',          'History'),
+    ('3149',       'Military History'),
+    ('3150',       'Ancient History'),
+    ('3151',       'World History'),
+    ('3152',       'Americas History'),
+    ('3153',       'European History'),
+    ('3154',       'African History'),
+    ('3155',       'Asian History'),
+    ('3156',       'Middle East History'),
+    ('3157',       'Renaissance History'),
+    ('3158',       'Modern History'),
+    # ── Literature & Fiction ──────────────────────────────────────────────────
+    ('10672',      'Literature & Fiction'),
+    ('49',         'Mystery, Thriller & Suspense'),
+    ('48',         'Science Fiction & Fantasy'),
+    ('47',         'Fantasy'),
+    ('3510',       'Romance'),
+    ('695398',     'Historical Fiction'),
+    ('16',         'Short Stories'),
+    ('156',        'Anthologies'),
+    ('17',         'Drama'),
+    ('4956',       'Poetry'),
+    ('4686',       'Action & Adventure'),
+    ('4687',       'Classics'),
+    ('4688',       'Contemporary Fiction'),
+    ('4689',       'Erotica'),
+    ('4690',       'Gay & Lesbian Fiction'),
+    ('4691',       'Horror'),
+    ('4692',       'Literary Fiction'),
+    ('4693',       'Psychological Thrillers'),
+    ('4694',       'Satire'),
+    ('4695',       'Sea Adventures'),
+    ('4696',       'Visionary Fiction'),
+    # ── Teen & Young Adult ────────────────────────────────────────────────────
+    ('28',         'Teen & Young Adult'),
+    ('4700',       'YA Action & Adventure'),
+    ('4701',       'YA Arts'),
+    ('4702',       'YA Biographies'),
+    ('4703',       'YA Fantasy & Magic'),
+    ('4704',       'YA Horror'),
+    ('4705',       'YA Mystery & Thriller'),
+    ('4706',       'YA Romance'),
+    ('4707',       'YA Science Fiction'),
+    ('4708',       'YA Social Issues'),
+    ('4709',       'YA Sports'),
+    # ── Childrens Books ───────────────────────────────────────────────────────
+    ("3",          "Children's Books"),
+    ('4710',       "Children's Action & Adventure"),
+    ('4711',       "Children's Animals"),
+    ('4712',       "Children's Arts, Music & Photography"),
+    ('4713',       "Children's Biographies"),
+    ('4714',       "Children's Computers & Technology"),
+    ('4715',       "Children's Fairy Tales"),
+    ('4716',       "Children's Geography & Cultures"),
+    ('4717',       "Children's History"),
+    ('4718',       "Children's Holidays & Celebrations"),
+    ('4719',       "Children's Humor"),
+    ('4720',       "Children's Mysteries & Detectives"),
+    ('4721',       "Children's Religions"),
+    ('4722',       "Children's Science & Nature"),
+    ('4723',       "Children's Social Issues"),
+    ('4724',       "Children's Sports & Outdoors"),
+    # ── Science & Math ────────────────────────────────────────────────────────
+    ('75',         'Science & Math'),
+    ('3728',       'Astronomy & Space Science'),
+    ('3729',       'Biological Sciences'),
+    ('3730',       'Chemistry'),
+    ('3731',       'Earth Sciences'),
+    ('3732',       'Mathematics'),
+    ('3733',       'Physics'),
+    ('3734',       'Technology'),
+    ('3735',       'Environment'),
+    ('3736',       'Agriculture'),
+    ('3737',       'Paleontology'),
+    ('3738',       'Nature & Ecology'),
+    # ── Medical Books ─────────────────────────────────────────────────────────
+    ('173513',     'Medical Books'),
+    ('3440',       'Medicine'),
+    ('3442',       'Dentistry'),
+    ('3443',       'Pharmacology'),
+    ('3444',       'Veterinary Medicine'),
+    ('3445',       'Surgery'),
+    ('3446',       'Anatomy'),
+    ('3447',       'Clinical'),
+    ('3449',       'Radiology'),
+    ('3450',       'Neuroscience'),
+    ('3451',       'Oncology'),
+    ('3452',       'Cardiology'),
+    ('3453',       'Immunology'),
+    # ── Computers & Technology ────────────────────────────────────────────────
+    ('4',          'Computers & Technology'),
+    ('3760',       'Programming & Web Design'),
+    ('3761',       'Networking & Cloud Computing'),
+    ('3762',       'Computer Science'),
+    ('3763',       'Security & Encryption'),
+    ('3764',       'Hardware'),
+    ('3765',       'Software'),
+    ('3766',       'Databases'),
+    ('3767',       'Artificial Intelligence'),
+    ('3768',       'Mobile Phones & Tablets'),
+    ('3769',       'Graphics & Design'),
+    ('3770',       'Internet & Social Media'),
+    # ── Education & Teaching ──────────────────────────────────────────────────
+    ('4677',       'Education & Teaching'),
+    ('4967',       'Test Preparation'),
+    ('4963',       'Reference'),
+    ('25',         'Foreign Language Study'),
+    # ── Arts & Photography ────────────────────────────────────────────────────
+    ('173507',     'Arts & Photography'),
+    ('4961',       'Photography'),
+    ('4962',       'Graphic Design'),
+    ('4686',       'Architecture'),
+    ('298471',     'Music'),
+    ('4963',       'Decorative Arts'),
+    # ── Cookbooks ────────────────────────────────────────────────────────────
+    ('154606011',  'Cookbooks, Food & Wine'),
+    ('4730',       'Baking'),
+    ('4731',       'Barbecuing'),
+    ('4732',       'Beverages & Wine'),
+    ('4733',       'Desserts'),
+    ('4734',       'Entertaining'),
+    ('4735',       'Healthy Cooking'),
+    ('4736',       'Ingredients'),
+    ('4737',       'International Cooking'),
+    ('4738',       'Quick & Easy Cooking'),
+    ('4739',       'Vegetarian Cooking'),
+    # ── Parenting ─────────────────────────────────────────────────────────────
+    ('4919',       'Parenting & Relationships'),
+    ('4920',       'Parenting'),
+    ('4921',       'Family Relationships'),
+    ('4922',       'Aging Parents'),
+    ('4923',       'Marriage & Adult Relationships'),
+    ('4924',       'Reference'),
+    # ── Sports & Outdoors ────────────────────────────────────────────────────
+    ('173511',     'Sports & Outdoors'),
+    ('3800',       'Baseball'),
+    ('3801',       'Basketball'),
+    ('3802',       'Coaching'),
+    ('3803',       'Extreme Sports'),
+    ('3804',       'Football'),
+    ('3805',       'Golf'),
+    ('3806',       'Hockey'),
+    ('3807',       'Hunting & Fishing'),
+    ('3808',       'Individual Sports'),
+    ('3809',       'Motor Sports'),
+    ('3810',       'Outdoor Recreation'),
+    ('3811',       'Racket Sports'),
+    ('3812',       'Soccer'),
+    ('3813',       'Training'),
+    ('3814',       'Water Sports'),
+    # ── Politics & Social Sciences ────────────────────────────────────────────
+    ('11232',      'Politics & Social Sciences'),
+    ('2701',       'Social Sciences'),
+    ('173516',     'Philosophy'),
+    ('173517',     'Linguistics'),
+    ('3820',       'Anthropology'),
+    ('3821',       'Archaeology'),
+    ('3822',       'Criminology'),
+    ('3823',       'Demography'),
+    ('3824',       'Feminism'),
+    ('3825',       'Gender Studies'),
+    ('3826',       'Geopolitics'),
+    ('3827',       'Political Science'),
+    ('3828',       'Public Administration'),
+    ('3829',       'Sociology'),
+    # ── Law ──────────────────────────────────────────────────────────────────
+    ('173514',     'Law'),
+    ('3840',       'Administrative Law'),
+    ('3841',       'Business Law'),
+    ('3842',       'Constitutional Law'),
+    ('3843',       'Criminal Law'),
+    ('3844',       'Environmental Law'),
+    ('3845',       'Family Law'),
+    ('3846',       'Immigration Law'),
+    ('3847',       'Intellectual Property'),
+    ('3848',       'International Law'),
+    ('3849',       'Tax Law'),
+    # ── Crafts, Hobbies & Home ───────────────────────────────────────────────
+    ('16272',      'Crafts, Hobbies & Home'),
+    ('3860',       'Antiques & Collectibles'),
+    ('3861',       'Crafts'),
+    ('3862',       'Gardening & Landscape'),
+    ('3863',       'Home Improvement'),
+    ('3864',       'Hobbies'),
+    ('3865',       'Pets & Animal Care'),
+    # ── Comics & Graphic Novels ───────────────────────────────────────────────
+    ('5',          'Comics & Graphic Novels'),
     ('10777',      'LGBTQ+ Books'),
-    ('156',        'Anthologies & Literature Collections'),
+    ('86',         'Gay & Lesbian'),
+    # ── Humor ────────────────────────────────────────────────────────────────
+    ('4951',       'Humor & Entertainment'),
+    ('13996',      'True Crime'),
+    # ── Engineering & Transportation ─────────────────────────────────────────
+    ('173512',     'Engineering & Transportation'),
+    ('3880',       'Automotive'),
+    ('3881',       'Civil Engineering'),
+    ('3882',       'Electrical Engineering'),
+    ('3883',       'Environmental Engineering'),
+    ('3884',       'Industrial Engineering'),
+    ('3885',       'Mechanical Engineering'),
+    ('3886',       'Military Technology'),
+    ('3887',       'Robotics & Automation'),
+    # ── Travel ───────────────────────────────────────────────────────────────
+    ('2642',       'Travel'),
+    ('3900',       'Africa Travel'),
+    ('3901',       'Americas Travel'),
+    ('3902',       'Asia Travel'),
+    ('3903',       'Australia & Pacific Travel'),
+    ('3904',       'Europe Travel'),
+    ('3905',       'Middle East Travel'),
+    ('3906',       'Specialty Travel'),
 ]
 
 MAX_PAGES_PER_SLOT = 0   # 0 = unlimited
 MAX_REVIEWS        = 5
 DELAY_MIN          = 2.0
 DELAY_MAX          = 4.0
-DISCOVER_DEPTH     = 2
+DISCOVER_DEPTH     = 3
 
 USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -161,8 +375,14 @@ def build_url(cat_id, format_code, month, year, page=1):
         f"&page={page}&unfiltered=1&ref=sr_adv_b"
     )
 
-def build_category_browse_url(cat_id):
-    return f"https://www.amazon.com/s?i=stripbooks&rh=n%3A{cat_id}&s=featured-rank"
+def build_discovery_url(cat_id):
+    # Use the working advanced search format with a fixed recent date for BFS discovery
+    return (
+        f"https://www.amazon.com/s?i=stripbooks"
+        f"&rh=n%3A{cat_id}%2Cp_n_feature_browse-bin%3A2656022011"
+        f"&s=date-desc-rank&p_45=1&p_46=During&p_47=2024"
+        f"&page=1&unfiltered=1"
+    )
 
 # ─── HTTP ─────────────────────────────────────────────────────────────────────
 
@@ -218,23 +438,32 @@ def has_next_page(html):
 # ─── Category Discovery ───────────────────────────────────────────────────────
 
 def extract_child_nodes(html):
-    """Extract n: node IDs from left-nav category refinements."""
+    """Extract n: node IDs from left-nav category refinements in search results."""
     soup = BeautifulSoup(html, 'html.parser')
     found = {}
-    for a in soup.select('li[id*="n-"] a[href], .a-expander-content a[href], [data-csa-c-item-id] a[href]'):
+    # Left nav refinement links
+    for a in soup.select(
+        '#s-refinements a[href], '
+        '.a-expander-content a[href], '
+        'li[id*="n-"] a[href], '
+        '[data-csa-c-item-id] a[href]'
+    ):
         href = a.get('href', '')
         if not href:
             continue
         full    = urljoin('https://www.amazon.com', href)
         decoded = unquote(full)
-        for m in re.finditer(r'[?&/]n[%3A:=]([0-9]{3,12})', decoded):
-            nid = m.group(1)
-            label = a.get_text(' ', strip=True)[:100]
-            found[nid] = label or f'Node {nid}'
+        # Match rh=...n:NODEID or /n/NODEID patterns
+        for m in re.finditer(r'(?:rh=[^&]*n[%3A:])([0-9]{3,12})|[?&/]n[%3A:=]([0-9]{3,12})', decoded):
+            nid = m.group(1) or m.group(2)
+            if nid:
+                label = a.get_text(' ', strip=True)[:100]
+                found[nid] = label or f'Node {nid}'
     return found
 
 def discover_categories(depth=2):
-    """BFS from seed categories to discover subcategories up to `depth` levels."""
+    """BFS from seed categories to discover subcategories up to `depth` levels.
+    Uses the working advanced search URL format to avoid 503s on browse pages."""
     all_cats = {cat_id: name for cat_id, name in SEED_CATEGORIES}
     if depth == 0:
         return list(all_cats.items())
@@ -246,16 +475,18 @@ def discover_categories(depth=2):
         node_id, name, level = q.popleft()
         if level >= depth:
             continue
-        html = fetch_page(build_category_browse_url(node_id))
+        html = fetch_page(build_discovery_url(node_id))
         if not html:
+            time.sleep(random.uniform(3.0, 6.0))
             continue
-        for child_id, child_name in extract_child_nodes(html).items():
+        children = extract_child_nodes(html)
+        for child_id, child_name in children.items():
             if child_id in seen:
                 continue
             seen.add(child_id)
             all_cats[child_id] = child_name
             q.append((child_id, child_name, level + 1))
-        time.sleep(random.uniform(1.0, 2.5))
+        time.sleep(random.uniform(2.0, 4.0))
 
     log.info(f'[DISCOVER] {len(all_cats)} total categories (seed={len(SEED_CATEGORIES)}, depth={depth})')
     return list(all_cats.items())
