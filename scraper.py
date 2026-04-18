@@ -21,6 +21,7 @@ import sys
 import json
 import logging
 from collections import deque
+from pathlib import Path
 from urllib.parse import unquote, urljoin
 
 import requests
@@ -461,35 +462,63 @@ def extract_child_nodes(html):
                 found[nid] = label or f'Node {nid}'
     return found
 
+CATEGORIES_CACHE_FILE = Path('categories.json')
+
 def discover_categories(depth=2):
     """BFS from seed categories to discover subcategories up to `depth` levels.
-    Uses the working advanced search URL format to avoid 503s on browse pages."""
+    Saves discovered categories to categories.json so discovery only runs ONCE ever.
+    On subsequent runs, loads from file instantly."""
+
+    # Load from cache if exists
+    if CATEGORIES_CACHE_FILE.exists():
+        cats = json.loads(CATEGORIES_CACHE_FILE.read_text())
+        log.info(f'[DISCOVER] Loaded {len(cats):,} categories from {CATEGORIES_CACHE_FILE}')
+        return [(c['id'], c['name']) for c in cats]
+
     all_cats = {cat_id: name for cat_id, name in SEED_CATEGORIES}
     if depth == 0:
+        _save_categories(all_cats)
         return list(all_cats.items())
 
     q    = deque((cat_id, name, 0) for cat_id, name in SEED_CATEGORIES)
     seen = set(all_cats.keys())
+    total_fetched = 0
+
+    log.info(f'[DISCOVER] Starting BFS from {len(SEED_CATEGORIES)} seeds, depth={depth}...')
 
     while q:
         node_id, name, level = q.popleft()
         if level >= depth:
             continue
         html = fetch_page(build_discovery_url(node_id))
+        total_fetched += 1
         if not html:
             time.sleep(random.uniform(3.0, 6.0))
             continue
         children = extract_child_nodes(html)
+        new_found = 0
         for child_id, child_name in children.items():
             if child_id in seen:
                 continue
             seen.add(child_id)
             all_cats[child_id] = child_name
             q.append((child_id, child_name, level + 1))
+            new_found += 1
+        log.info(f'  [L{level}] {name[:40]} → +{new_found} children | total={len(all_cats)} | queue={len(q)}')
+
+        # Save progress every 50 fetches so we can resume if interrupted
+        if total_fetched % 50 == 0:
+            _save_categories(all_cats)
+
         time.sleep(random.uniform(2.0, 4.0))
 
-    log.info(f'[DISCOVER] {len(all_cats)} total categories (seed={len(SEED_CATEGORIES)}, depth={depth})')
+    _save_categories(all_cats)
+    log.info(f'[DISCOVER] Complete: {len(all_cats):,} total categories saved to {CATEGORIES_CACHE_FILE}')
     return list(all_cats.items())
+
+def _save_categories(cats: dict):
+    data = [{'id': k, 'name': v} for k, v in cats.items()]
+    CATEGORIES_CACHE_FILE.write_text(json.dumps(data, indent=2))
 
 # ─── HTML Parser ──────────────────────────────────────────────────────────────
 
