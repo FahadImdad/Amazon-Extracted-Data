@@ -20,6 +20,7 @@ import sys
 import threading
 import time
 from collections import deque
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from urllib.parse import unquote, urljoin
 
@@ -37,10 +38,11 @@ FORMAT_CODES = {
     'Kindle':    '618073011',
 }
 
-MAX_REVIEWS   = 5
-SCRAPE_DELAY  = (2.0, 4.0)
-PUB_DELAY     = (1.0, 2.0)
-PUB_WORKERS   = 10
+MAX_REVIEWS    = 5
+SCRAPE_DELAY   = (1.5, 3.0)
+PUB_DELAY      = (1.0, 2.0)
+PUB_WORKERS    = 10
+SCRAPE_WORKERS = 5   # parallel category slots
 DISCOVER_DEPTH = 3
 CATEGORIES_FILE = Path('categories.json')
 MAX_RETRIES   = 4
@@ -317,54 +319,81 @@ def parse_books(html, fmt_name):
             continue
     return books
 
-def scrape_month(year, month, cats, out_csv, state_file):
-    done = set(json.loads(Path(state_file).read_text()).get('done', [])) if Path(state_file).exists() else set()
-    seen = set()
+def scrape_month(year, month, cats, out_csv, state_file, num_workers=SCRAPE_WORKERS):
+    state_path = Path(state_file)
+    done       = set(json.loads(state_path.read_text()).get('done', [])) if state_path.exists() else set()
+    done_lock  = threading.Lock()
+    seen       = set()
+    seen_lock  = threading.Lock()
+    csv_lock   = threading.Lock()
+    total_lock = threading.Lock()
+    total      = [0]
+
     if out_csv.exists():
         with open(out_csv, newline='', encoding='utf-8') as f:
             for row in csv.DictReader(f):
                 if row.get('ASIN'):
                     seen.add(row['ASIN'])
-    print(f'\n[SCRAPE] {year}-{month:02d} | {len(cats)} categories | {len(seen)} existing ASINs', flush=True)
 
-    total = 0
-    slots = len(cats) * len(FORMAT_CODES)
-    done_count = 0
+    slots_all  = [(cat_id, cat_name, fmt_name, fmt_code)
+                  for cat_id, cat_name in cats
+                  for fmt_name, fmt_code in FORMAT_CODES.items()]
+    slots_todo = [(cid, cn, fn, fc) for cid, cn, fn, fc in slots_all
+                  if f'{cid}:{fn}' not in done]
 
-    for cat_id, cat_name in cats:
-        for fmt_name, fmt_code in FORMAT_CODES.items():
-            key = f'{cat_id}:{fmt_name}'
-            done_count += 1
-            if key in done:
-                continue
-            page = 1
-            slot_new = 0
-            while True:
-                html = get(search_url(cat_id, fmt_code, month, year, page))
-                if not html:
-                    break
-                books = parse_books(html, fmt_name)
-                new   = [b for b in books if b['ASIN'] not in seen]
-                if new:
-                    for b in new:
-                        seen.add(b['ASIN'])
+    print(f'\n[SCRAPE] {year}-{month:02d} | {len(cats)} cats | {len(slots_all)} slots | '
+          f'{len(slots_all)-len(slots_todo)} already done | {num_workers} workers', flush=True)
+
+    completed = [0]
+
+    def scrape_slot(cat_id, cat_name, fmt_name, fmt_code):
+        session = requests.Session()
+        page    = 1
+        slot_new = 0
+        while True:
+            url  = search_url(cat_id, fmt_code, month, year, page)
+            html = get(url)
+            if not html:
+                break
+            books = parse_books(html, fmt_name)
+            with seen_lock:
+                new = [b for b in books if b['ASIN'] not in seen]
+                for b in new:
+                    seen.add(b['ASIN'])
+            if new:
+                with csv_lock:
                     _append(out_csv, new)
+                with total_lock:
+                    total[0] += len(new)
                     slot_new += len(new)
-                    total    += len(new)
-                if new or page == 1:
-                    print(f'  [{done_count}/{slots}] {cat_name[:25]}/{fmt_name} p{page}: +{len(new)} (total={total})', flush=True)
-                if not has_next(html):
-                    break
-                time.sleep(random.uniform(*SCRAPE_DELAY))
-                page += 1
-            done.add(key)
-            if len(done) % 10 == 0:
-                Path(state_file).write_text(json.dumps({'done': list(done)}))
-            time.sleep(random.uniform(0.5, 1.5))
+            if not has_next(html):
+                break
+            time.sleep(random.uniform(*SCRAPE_DELAY))
+            page += 1
 
-    Path(state_file).write_text(json.dumps({'done': list(done)}))
-    print(f'\n[SCRAPE] Done: {total} new books saved to {out_csv}', flush=True)
-    return total
+        key = f'{cat_id}:{fmt_name}'
+        with done_lock:
+            done.add(key)
+            completed[0] += 1
+            c = completed[0]
+            if c % 20 == 0:
+                state_path.write_text(json.dumps({'done': list(done)}))
+
+        if slot_new > 0:
+            print(f'  [{c}/{len(slots_todo)}] {cat_name[:22]}/{fmt_name}: '
+                  f'+{slot_new} (grand={total[0]})', flush=True)
+
+    with ThreadPoolExecutor(max_workers=num_workers) as ex:
+        futures = [ex.submit(scrape_slot, *s) for s in slots_todo]
+        try:
+            for f in as_completed(futures):
+                f.result()
+        except KeyboardInterrupt:
+            print('\n[SCRAPE] Interrupted — saving state...', flush=True)
+
+    state_path.write_text(json.dumps({'done': list(done)}))
+    print(f'\n[SCRAPE] Done: {total[0]} new books → {out_csv}', flush=True)
+    return total[0]
 
 def _append(path, rows):
     is_new = not path.exists()
@@ -516,8 +545,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--month',   required=True, help='YYYY-MM')
     parser.add_argument('--out-dir', default='data_3')
-    parser.add_argument('--workers', type=int, default=PUB_WORKERS)
-    parser.add_argument('--pub-delay', type=float, default=1.0)
+    parser.add_argument('--workers',       type=int,   default=PUB_WORKERS,    help='Publisher enrichment workers')
+    parser.add_argument('--scrape-workers',type=int,   default=SCRAPE_WORKERS, help='Parallel scrape slots (default 5)')
+    parser.add_argument('--pub-delay',     type=float, default=1.0)
     parser.add_argument('--no-push', action='store_true')
     args = parser.parse_args()
 
@@ -541,7 +571,7 @@ def main():
     print(f'[CONFIG] {len(cats)} categories × 3 formats × all pages\n', flush=True)
 
     # Step 2: Scrape
-    scrape_month(year, month, cats, csv_p, str(state))
+    scrape_month(year, month, cats, csv_p, str(state), num_workers=args.scrape_workers)
 
     # Step 3: Enrich publisher
     load_pub_cache()
