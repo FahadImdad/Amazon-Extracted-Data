@@ -5388,61 +5388,298 @@ Total Reviews,Product Url,ASIN,Title,Author,Format,Publication Date,Publisher
 0,https://www.amazon.com/dp/B08SWC3JZD,B08SWC3JZD,Simaian History: A Prologue (Simah II),M. Swami,Kindle,"Jan 12, 2021",
 0,https://www.amazon.com/dp/B08SW9QJTL,B08SW9QJTL,Pilgrim’s Purse: Uncommon Synths (Uncommon Synths Saga Book 7),Brian S. Parrish,Paperback,"Jan 12, 2021",
 0,https://www.amazon.com/dp/B08SW8FZFQ,B08SW8FZFQ,People from another star: Nanako's summer vacation,Kyoko  Sakura,Kindle,"Jan 12, 2021",
-0,https://www.amazon.com/dp/B08SW2FMKR,B08SW2FMKR,Unnamed Journal 25 : Rabbit Gets the Gun (Unnamed Anthology),Thomas  Fitz,Kindle,"Jan 12, 2021",
-0,https://www.amazon.com/dp/B08Q6BKZX8,B08Q6BKZX8,"ITEM 101 (The Item Series (ITEM 101, ITEM 102, ITEM 103) Book 1)",Ben Simon Lazarus,Paperback,"Jan 12, 2021",
-0,https://www.amazon.com/dp/B08STLPCDV,B08STLPCDV,The Brilliant Science Fiction Journal: Sci-fi Journal notebook complete with Captain's Logs,Patricia Gilbers,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SRFDDW2,B08SRFDDW2,"We are most alive when we’re in love.: Valentine's day notebook, diary.",Robert ART,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SPKRJ5N,B08SPKRJ5N,Strays: The Corrector. Book 1,Eugene Lotosh,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SPF5GHF,B08SPF5GHF,"Notebook: Space Lover Journal Stars Design, 120 Pages 6 X 9 Design Star Astronomy Lined Notebook",Coteafee Designs,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SP45Q7F,B08SP45Q7F,30 Days on Mars: Diary,Zoreslav Stepanov,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SLGF2T1,B08SLGF2T1,Consciousnesses: Voids Versified,George O. Obikoya,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SH89SZN,B08SH89SZN,What Lies Beyond the Clock of Time: Volume 4 of 6,Cecil E Riggs,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SGZ7WKW,B08SGZ7WKW,What Lies Beyond the Clock of Time: Volume 6 of 6,Cecil E Riggs,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SGWD6HB,B08SGWD6HB,What Lies Beyond the Clock of Time: Volume 5 of 6,Cecil E Riggs,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SGR2WLM,B08SGR2WLM,RAVEN'S ANCIENT: A Raven's Tales Prequel (THE RAVEN TALES Prequels),J.B. Dane,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SFZD1YP,B08SFZD1YP,The Proud Orangutan and the Monkey: The Debate,Rosana  P Butler,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SFZCZT6,B08SFZCZT6,SUNSET,William H Bailey,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SFZCXCS,B08SFZCXCS,Queen of the Arts 2: The Black panther,Azuka Oyem,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/1716200075,1716200075,The Time Traveler's Nephew,John Green,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SGWTCFV,B08SGWTCFV,Honsetsu: Quest for the Orb,Auguste Somers,Paperback,"Jan 8, 2021",
-0,https://www.amazon.com/dp/0578838494,0578838494,Seed of Aldebaran: Travails of Colonization,James Crawford,Paperback,"Jan 8, 2021",
-0,https://www.amazon.com/dp/B08T48HJP8,B08T48HJP8,God's Nose,Damon Knight,Paperback,"Jan 8, 2021",
-0,https://www.amazon.com/dp/B08SSHMDNQ,B08SSHMDNQ,Trip Hazard: A near-future sci-fi conspiracy thriller (The Enna Dacourt books Book 3),Chris Towndrow,Paperback,"Jan 11, 2021",
+0,https://www.amazon.com/dp/B08SW2FMKR,B08SW2FMKR,Unnamed Journal 25 : Rabbit Gets the Gun (Unnamed Anthology),Thomas  Fitz,Kindle,"Jan 12, 2021",Shallow & Pedantic Publishing
+0,https://www.amazon.com/dp/B08Q6BKZX8,B08Q6BKZX8,"ITEM 101 (The Item Series (ITEM 101, ITEM 102, ITEM 103) Book 1)",Ben Simon Lazarus,Paperback,"Jan 12, 2021",Finesse Literary Press
+0,https://www.amazon.com/dp/B08STLPCDV,B08STLPCDV,The Brilliant Science Fiction Journal: Sci-fi Journal notebook complete with Captain's Logs,Patricia Gilbers,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/B08SRFDDW2,B08SRFDDW2,"We are most alive when we’re in love.: Valentine's day notebook, diary.",Robert ART,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/B08SPKRJ5N,B08SPKRJ5N,Strays: The Corrector. Book 1,Eugene Lotosh,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/B08SPF5GHF,B08SPF5GHF,"Notebook: Space Lover Journal Stars Design, 120 Pages 6 X 9 Design Star Astronomy Lined Notebook",Coteafee Designs,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/B08SP45Q7F,B08SP45Q7F,30 Days on Mars: Diary,Zoreslav Stepanov,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/B08SLGF2T1,B08SLGF2T1,Consciousnesses: Voids Versified,George O. Obikoya,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/B08SH89SZN,B08SH89SZN,What Lies Beyond the Clock of Time: Volume 4 of 6,Cecil E Riggs,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/B08SGZ7WKW,B08SGZ7WKW,What Lies Beyond the Clock of Time: Volume 6 of 6,Cecil E Riggs,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/B08SGWD6HB,B08SGWD6HB,What Lies Beyond the Clock of Time: Volume 5 of 6,Cecil E Riggs,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/B08SGR2WLM,B08SGR2WLM,RAVEN'S ANCIENT: A Raven's Tales Prequel (THE RAVEN TALES Prequels),J.B. Dane,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/B08SFZD1YP,B08SFZD1YP,The Proud Orangutan and the Monkey: The Debate,Rosana  P Butler,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/B08SFZCZT6,B08SFZCZT6,SUNSET,William H Bailey,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/B08SFZCXCS,B08SFZCXCS,Queen of the Arts 2: The Black panther,Azuka Oyem,Paperback,"Jan 9, 2021",Independently published
+0,https://www.amazon.com/dp/1716200075,1716200075,The Time Traveler's Nephew,John Green,Paperback,"Jan 9, 2021",Lulu.com
+0,https://www.amazon.com/dp/B08SGWTCFV,B08SGWTCFV,Honsetsu: Quest for the Orb,Auguste Somers,Paperback,"Jan 8, 2021",Independently published
+0,https://www.amazon.com/dp/0578838494,0578838494,Seed of Aldebaran: Travails of Colonization,James Crawford,Paperback,"Jan 8, 2021",James Crawford
+0,https://www.amazon.com/dp/B08T48HJP8,B08T48HJP8,God's Nose,Damon Knight,Paperback,"Jan 8, 2021",Independently published
+0,https://www.amazon.com/dp/B08SSHMDNQ,B08SSHMDNQ,Trip Hazard: A near-future sci-fi conspiracy thriller (The Enna Dacourt books Book 3),Chris Towndrow,Paperback,"Jan 11, 2021",Valericain Press
 0,https://www.amazon.com/dp/B08SR281VL,B08SR281VL,A Woman's World,Linda Spencer,Paperback,"Jan 11, 2021",
 0,https://www.amazon.com/dp/B08SQZPJN4,B08SQZPJN4,The Dominant Gene: Parallel Journey of unrivalled lives...,Jitha Sharun,Kindle,"Jan 11, 2021",
-0,https://www.amazon.com/dp/B08SQ58727,B08SQ58727,Christopher Thomas Smith’s Excursion into the Interdict Zone: File Number 5.328.428,Frank Kyle,Paperback,"Jan 11, 2021",
-0,https://www.amazon.com/dp/B08SLKVTQ2,B08SLKVTQ2,Message from the future: WE MADE IT!,Henning Jon Grini,Paperback,"Jan 11, 2021",
+0,https://www.amazon.com/dp/B08SQ58727,B08SQ58727,Christopher Thomas Smith’s Excursion into the Interdict Zone: File Number 5.328.428,Frank Kyle,Paperback,"Jan 11, 2021","Booklocker.com, Inc."
+0,https://www.amazon.com/dp/B08SLKVTQ2,B08SLKVTQ2,Message from the future: WE MADE IT!,Henning Jon Grini,Paperback,"Jan 11, 2021",Gaiainnovations
 0,https://www.amazon.com/dp/B08SPWYKRN,B08SPWYKRN,Worlds Apart Book 11: Charlemagne,Victor Kilo,Paperback,"Jan 10, 2021",
-0,https://www.amazon.com/dp/B095RPG31P,B095RPG31P,The Movers Series: The Astridians,Erica Walsh,Paperback,"Jan 10, 2021",
-0,https://www.amazon.com/dp/B0945K3PGF,B0945K3PGF,SPECULATIVE ENCOUNTERS,C. L. Nichols,Paperback,"Jan 10, 2021",
-0,https://www.amazon.com/dp/B0G768HPWR,B0G768HPWR,Dual Sentence: Book 1: D-Block Experiment,The  Zebra Killa,Kindle,"Apr 4, 2026",
+0,https://www.amazon.com/dp/B095RPG31P,B095RPG31P,The Movers Series: The Astridians,Erica Walsh,Paperback,"Jan 10, 2021",Writer Chick Press
+0,https://www.amazon.com/dp/B0945K3PGF,B0945K3PGF,SPECULATIVE ENCOUNTERS,C. L. Nichols,Paperback,"Jan 10, 2021",Lulu.com
+0,https://www.amazon.com/dp/B0G768HPWR,B0G768HPWR,Dual Sentence: Book 1: D-Block Experiment,The  Zebra Killa,Kindle,"Apr 4, 2026",Bay Area Block Report
 0,https://www.amazon.com/dp/B08SMT92KN,B08SMT92KN,Culmination: Contact,Ramon Burton,Kindle,"Jan 10, 2021",
 0,https://www.amazon.com/dp/B08SMKSDTJ,B08SMKSDTJ,"The stars of despair, part two",Edward Atkinson,Paperback,"Jan 10, 2021",
 0,https://www.amazon.com/dp/B08SMHTT1P,B08SMHTT1P,"The stars of despair, part one",Edward Atkinson,Paperback,"Jan 10, 2021",
 0,https://www.amazon.com/dp/B08SMH3NQR,B08SMH3NQR,Exiles: The Saga of the City States - Book 3,Darren  Hale,Kindle,"Jan 10, 2021",
-0,https://www.amazon.com/dp/B08SLX3K1W,B08SLX3K1W,The Transport,Don DeBon,Kindle,"Jan 10, 2021",
+0,https://www.amazon.com/dp/B08SLX3K1W,B08SLX3K1W,The Transport,Don DeBon,Kindle,"Jan 10, 2021",DBDigital Publications
 0,https://www.amazon.com/dp/B08SLV3NKC,B08SLV3NKC,When Myths Come True (Enchantment),Aydriel Cartier,Kindle,"Jan 10, 2021",
 0,https://www.amazon.com/dp/B08SLKGZ6K,B08SLKGZ6K,Sky Judgement: Alien Justice for the Human Race,Charles Kidd,Kindle,"Jan 10, 2021",
 0,https://www.amazon.com/dp/B08SLGJNWD,B08SLGJNWD,Catch a Falling Constellation,Nelson Blocker,Paperback,"Jan 10, 2021",
-0,https://www.amazon.com/dp/B08PZ8XT24,B08PZ8XT24,The Truce: Worldsend Garrison Book 5,M.D. Krix,Paperback,"Jan 10, 2021",
+0,https://www.amazon.com/dp/B08PZ8XT24,B08PZ8XT24,The Truce: Worldsend Garrison Book 5,M.D. Krix,Paperback,"Jan 10, 2021",Grivs Publishing
 0,https://www.amazon.com/dp/B08SLG9F43,B08SLG9F43,The Sity Part 2: Found and Lost (The Sity Book One),Curran Geist,Kindle,"Jan 9, 2021",
 0,https://www.amazon.com/dp/B08SLG5THJ,B08SLG5THJ,Tomorrow's Morrow,Nicolas Schrammeck,Kindle,"Jan 9, 2021",
 0,https://www.amazon.com/dp/B08SLB9H83,B08SLB9H83,Cultural exchange,ZOUHAIR TALBI,Kindle,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SL9X9P1,B08SL9X9P1,Black Star: Immortality or Humanity (The Heathen Series),Michael Dawson,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SL9BJL7,B08SL9BJL7,Life on Mars: Immortality or Humanity (The Heathen Series),Michael J Dawson,Paperback,"Jan 9, 2021",
+0,https://www.amazon.com/dp/B08SL9X9P1,B08SL9X9P1,Black Star: Immortality or Humanity (The Heathen Series),Michael Dawson,Paperback,"Jan 9, 2021",Action Factory Publishing Limited
+0,https://www.amazon.com/dp/B08SL9BJL7,B08SL9BJL7,Life on Mars: Immortality or Humanity (The Heathen Series),Michael J Dawson,Paperback,"Jan 9, 2021",The Action Factory Publishing
 0,https://www.amazon.com/dp/B08SL6NW9B,B08SL6NW9B,Gloria's Shadow,Dustin Bobber,Kindle,"Jan 9, 2021",
 0,https://www.amazon.com/dp/B08SL5B6JT,B08SL5B6JT,Collective Intelligence: CoIn,L2K,Kindle,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SKW49BZ,B08SKW49BZ,The Duineryl: The Huskworld Covenant,Brian Hapgood,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SKRPZ3V,B08SKRPZ3V,ReAnimate: A WorldSim Novel,C. S. Hall,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SKQ9Q4P,B08SKQ9Q4P,Connection: A Hildenverse Short Story (Short Stories),Josh Hilden,Kindle,"Jan 9, 2021",
+0,https://www.amazon.com/dp/B08SKW49BZ,B08SKW49BZ,The Duineryl: The Huskworld Covenant,Brian Hapgood,Paperback,"Jan 9, 2021",Creepy Doll Books
+0,https://www.amazon.com/dp/B08SKRPZ3V,B08SKRPZ3V,ReAnimate: A WorldSim Novel,C. S. Hall,Paperback,"Jan 9, 2021",Self
+0,https://www.amazon.com/dp/B08SKQ9Q4P,B08SKQ9Q4P,Connection: A Hildenverse Short Story (Short Stories),Josh Hilden,Kindle,"Jan 9, 2021",GWSP
 0,https://www.amazon.com/dp/B08SKFZ57K,B08SKFZ57K,FUTELLIGENCE,AZ    Ahmed Zahran,Paperback,"Jan 9, 2021",
 0,https://www.amazon.com/dp/B08SK93B5X,B08SK93B5X,Queen of the Arts 2: The Black panther,Azuka Oyem,Paperback,"Jan 9, 2021",
-0,https://www.amazon.com/dp/B08SJ55SQT,B08SJ55SQT,Off limits,Borgny Tingstedt,Paperback,"Jan 8, 2021",
-0,https://www.amazon.com/dp/B08SH42TQ1,B08SH42TQ1,"Zena, Lesbian Space Pop Star",Summer Renna,Paperback,"Jan 8, 2021",
-0,https://www.amazon.com/dp/B08SH42T3X,B08SH42T3X,Raphael Marooned,Sean Monaghan,Paperback,"Jan 8, 2021",
-0,https://www.amazon.com/dp/B08SH1C981,B08SH1C981,The Hands of Fate Vol. 2 - Resurrection (The Hands Of Fate - Legion),Jack Dumont,Paperback,"Jan 8, 2021",
-0,https://www.amazon.com/dp/B08SGZLGTY,B08SGZLGTY,Black Star: Immortality or Humanity (The Heathen Series),Michael J Dawson,Paperback,"Jan 8, 2021",
-0,https://www.amazon.com/dp/B08SGWD1SZ,B08SGWD1SZ,ReAnimate: A WorldSim Novel,C S Hall,Paperback,"Jan 8, 2021",
-0,https://www.amazon.com/dp/B08SGR2TQ5,B08SGR2TQ5,Sparkx Will Fly: Sparkx Wings It (Sparky Space Shuttle's First Space Mission),Mike Teale,Paperback,"Jan 8, 2021",
-0,https://www.amazon.com/dp/B08SFZD36M,B08SFZD36M,Life on Mars: Immortality or Humanity (The Heathen Series),Michael J Dawson,Paperback,"Jan 8, 2021",
-0,https://www.amazon.com/dp/B08SFVPVJ9,B08SFVPVJ9,Revolution (Cyborg saga),Mr Alberto Garcia Briz,Paperback,"Jan 8, 2021",
+0,https://www.amazon.com/dp/B08SJ55SQT,B08SJ55SQT,Off limits,Borgny Tingstedt,Paperback,"Jan 8, 2021",Independently published
+0,https://www.amazon.com/dp/B08SH42TQ1,B08SH42TQ1,"Zena, Lesbian Space Pop Star",Summer Renna,Paperback,"Jan 8, 2021",Independently published
+0,https://www.amazon.com/dp/B08SH42T3X,B08SH42T3X,Raphael Marooned,Sean Monaghan,Paperback,"Jan 8, 2021",Independently published
+0,https://www.amazon.com/dp/B08SH1C981,B08SH1C981,The Hands of Fate Vol. 2 - Resurrection (The Hands Of Fate - Legion),Jack Dumont,Paperback,"Jan 8, 2021",Independently published
+0,https://www.amazon.com/dp/B08SGZLGTY,B08SGZLGTY,Black Star: Immortality or Humanity (The Heathen Series),Michael J Dawson,Paperback,"Jan 8, 2021",Independently published
+0,https://www.amazon.com/dp/B08SGWD1SZ,B08SGWD1SZ,ReAnimate: A WorldSim Novel,C S Hall,Paperback,"Jan 8, 2021",Independently published
+0,https://www.amazon.com/dp/B08SGR2TQ5,B08SGR2TQ5,Sparkx Will Fly: Sparkx Wings It (Sparky Space Shuttle's First Space Mission),Mike Teale,Paperback,"Jan 8, 2021",Independently published
+0,https://www.amazon.com/dp/B08SFZD36M,B08SFZD36M,Life on Mars: Immortality or Humanity (The Heathen Series),Michael J Dawson,Paperback,"Jan 8, 2021",Independently published
+0,https://www.amazon.com/dp/B08SFVPVJ9,B08SFVPVJ9,Revolution (Cyborg saga),Mr Alberto Garcia Briz,Paperback,"Jan 8, 2021",Independently published
+0,https://www.amazon.com/dp/932727220X,932727220X,Operating System Concepts & C Programming BA/B.Sc. (CS) 2nd Sem. Pb. Uni.,Charanjeet Singh Puneet Kumar,Paperback,"Jan 1, 2021",KALYANI
+0,https://www.amazon.com/dp/B0DYVPNVQ6,B0DYVPNVQ6,Rust for Operating System Developers: From Kernel to User Space,Richard Johnson,Paperback,"Feb 28, 2025",Independently published
+0,https://www.amazon.com/dp/1950438945,1950438945,Homecoming (Curve of Humanity),Maquel A. Jacob,Paperback,"Jan 7, 2021",
+0,https://www.amazon.com/dp/B08SLGF467,B08SLGF467,"Gravitation is not responsible for people falling in love.: Valentine's day notebook, diary.",Robert ART,Paperback,"Jan 7, 2021",
+0,https://www.amazon.com/dp/B08VR8QDHS,B08VR8QDHS,Screen Time Tracker: Screen Time Tracker Log Book| 52-Week Undated Digital Detox Diary| Prevent Tech Addiction by Balancing Digital and Real Life for ... Weekly Digital Habit Tracker Journal,Infinity Publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VR9FFQR,B08VR9FFQR,Password Journal: Small Password Book for Internet Credentials | Alphabetical Tabs | 12 Entries per Letter | Antique Key Design | brown,100% Antique Style Password Keepers,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VR7WPJN,B08VR7WPJN,What the F*ck is my Password? | Chihuahua Password Notebook.: Password Logbook | 6 X 9 inches | Notebook 120- page lined | Great password notebook for record keeping.,Pass E. Worder,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08W7CWVVJ,B08W7CWVVJ,"Minimalist Password Tracker Journal: Discreet Password Manager, Size 6” X 9” (Pink Cover)",Safe Print Books,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08W78VKH4,B08W78VKH4,"Minimalist Password Tracker Journal: Discreet Password Manager, Size 6” X 9” (Purple Cover)",Safe Print Books,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08W3KS358,B08W3KS358,Hiking Password book: Password Logbook to Protect Usernames and Internet Password. Internet Password Organizer. (Portable Size 6x9),ESSOUAFI KAMAL,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VVC25Z5,B08VVC25Z5,"They Are All Here (Password Book Organizer) : Address & Password Log Book, Internet Login Keeper, Minimalist Logins And Passwords Organizer: Organizer for All Your Passwords",D&J,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VV6VKW8,B08VV6VKW8,"Isometric Drawing 3d Notebook Large A4 8.5""X11"" Inches - 100 Numbered-Page",Technical Drawing Essentials,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VV25B65,B08VV25B65,Password Book Organizer Alphabetical:: 6 x 9 Password Logbook with Tabs Printed | Smart Blue metallic Design,Vision Design,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08SGDZFDS,B08SGDZFDS,In the Shadow Of the Tower: The Tower Falls Tales 2,Richard Hendry,Paperback,"Jan 7, 2021",Independently published
+0,https://www.amazon.com/dp/B08SCYRX2W,B08SCYRX2W,Not at First: Sparky Space Shuttle Goes For Orbit (Sparky Space Shuttle's First Space Mission),Mike Teale,Paperback,"Jan 7, 2021",
+0,https://www.amazon.com/dp/B08SBDPRSW,B08SBDPRSW,"Steampunk Coloring Book: For Adults | Coloring Book with 30 Unique Pages to Color on Industrial Steam Art, Futuristic Mechanical Animals, Vintage ... for Creative Activity and Relaxation at Home.",PreniumSteampunkColoring Publishing,Paperback,"Jan 7, 2021",
+0,https://www.amazon.com/dp/B08SB7BCZ2,B08SB7BCZ2,Probing: Space is a Deep-Space Probe Probing Space (Sparky Space Shuttle's First Space Mission),Mike Teale,Paperback,"Jan 7, 2021",Independently published
+0,https://www.amazon.com/dp/B08SB3923N,B08SB3923N,"Steampunk Coloring Book: For Adults | Coloring Book with 30 Unique Pages to Color on Industrial Steam Art, Futuristic Mechanical Animals, Vintage ... for Creative Activity and Relaxation at Home.",PreniumSteampunkColoring Publishing,Paperback,"Jan 7, 2021",Independently published
+0,https://www.amazon.com/dp/1838369406,1838369406,Zombie Attack (Chronicles of the Infected),Rick Wood,Paperback,"Jan 7, 2021",Blood Splatter Press
+0,https://www.amazon.com/dp/1736000314,1736000314,Brick Of Sound pt. 2,Madison Pate,Paperback,"Jan 7, 2021",Madison Pate Books
+0,https://www.amazon.com/dp/1732880743,1732880743,Aphelion Sky: Exodus,Phianna Rekab,Paperback,"Jan 7, 2021",Greenstone Publishing LLC
+0,https://www.amazon.com/dp/B09RN5P4D9,B09RN5P4D9,Wordpress Websites Secrets: Training website builders!,Israel Adedara,Kindle,"Jan 31, 2021",Addekk Technologies
+0,https://www.amazon.com/dp/B08VKRJN9M,B08VKRJN9M,BASIC WRITING AND PUBLISHING ON AMAZON: Learning and understanding Basic Writing and publishing skills,Ekemini Udoh,Kindle,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VJHKQDH,B08VJHKQDH,COdeGEn : Programming For Kids Python Step1 A Practical Guide with Sample Codes (COdeGEn- Programming for Kids),Chamila Thisarani Bandara,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VJF27ZY,B08VJF27ZY,Alphabet recognition in unconstrained Air Writing using Depth Information: Master's Thesis,Robiul Islam,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B0DXL9JSKN,B0DXL9JSKN,Le plan d'action cybernétique (French Edition),Andre Edmond,Kindle,"Feb 17, 2025",
+0,https://www.amazon.com/dp/B0FCD8JYYL,B0FCD8JYYL,They’re Not Artificial Anymore: Are We Ready (The Agentic Trilogy Book 1),Patrick McCrudden,Kindle,"Jun 13, 2025",
+0,https://www.amazon.com/dp/B08VJ3F5BD,B08VJ3F5BD,PINTEREST AN ART OF MARKETING: YOUR STEP BY STEP GUIDE TO USING PINTEREST FOR MARKETING 2021,ABHIMANYU T,Kindle,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B0DXL9Q2TK,B0DXL9Q2TK,El Plan Cibernético (Spanish Edition),Andre Edmond,Kindle,"Feb 17, 2025",
+0,https://www.amazon.com/dp/B08VRMMVM6,B08VRMMVM6,Address Book: Full Moon - Sparkly Celestial Starry Night Sky / Track Names - Telephone Numbers - Emails in Small 6x9 Notebook Organizer / Alphabetical Tabs / Large Print / Great Senior Citizen Gift,Keep My Stuff Books,Paperback,"Jan 30, 2021",
+0,https://www.amazon.com/dp/B08VHLRGD5,B08VHLRGD5,Selling via virtual assistants: Presentation of search results and its influence on consumers – an empirical analysis,Tim Güth,Kindle,"Jan 30, 2021",
+0,https://www.amazon.com/dp/B08VHL7M7T,B08VHL7M7T,Getting Started for Beginners: Get To Know And Understand Basic Chess Tactics: Chess Strategy Names,Cordell Gischer,Kindle,"Jan 30, 2021",
+0,https://www.amazon.com/dp/B08VHKLMZ6,B08VHKLMZ6,Python Quick Start: A beginner's introduction to Python programming,Martin McBride,Kindle,"Jan 30, 2021",
+0,https://www.amazon.com/dp/B08VHHDJ9P,B08VHHDJ9P,How to Win at YouTube: Things I Wish I Knew Before Hitting Record,Steven Lomax,Kindle,"Jan 30, 2021",
+0,https://www.amazon.com/dp/B08VH86HLJ,B08VH86HLJ,"Ad Hoc Networks: 12th EAI International Conference, ADHOCNETS 2020, Paris, France, November 17, 2020, Proceedings (Lecture Notes of the Institute for ... ... Telecommunications Engineering Book 345)",Luca Foschini,Paperback,"November 17, 2020",Springer
+0,https://www.amazon.com/dp/B08VH6XCNK,B08VH6XCNK,"IoT as a Service: 6th EAI International Conference, IoTaaS 2020, Xi’an, China, November 19–20, 2020, Proceedings (Lecture Notes of the Institute for ... ... Telecommunications Engineering Book 346)",Bo Li,Paperback,"Jan 30, 2021",Springer
+0,https://www.amazon.com/dp/B08VH48649,B08VH48649,"How To Play Chess For Beginners: Basic Rules, Setup, Moves And More: Advanced Chess Strategy",Orpha Kennington,Kindle,"Jan 30, 2021",
+0,https://www.amazon.com/dp/B08VH22F76,B08VH22F76,Clubhouse Domination Secrets: How To Grow A Massive Following Fast And Make Money On The Hottest Social Media App. Tricks To Get Thousands Of Followers.,Alvaro Gutierrez,Kindle,"Jan 30, 2021",
+0,https://www.amazon.com/dp/B08VV25B6S,B08VV25B6S,Stop Doubting Your Self. Study Hard and Pass Your Phlebotomy Technician Exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VR8QPV5,B08VR8QPV5,IRAC Note book guide for lawyers,Ajein Publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VCMWV39,B08VCMWV39,Just the Rules: Federal Rules of Evidence,John Barkai,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VGPBWP7,B08VGPBWP7,"On the Nature of Bitcoin: Digital transformation, cybercrime, economics, politics & internet culture: a multidimensional approach to Bitcoin",Teunis Dokter,Paperback,"Jan 30, 2021",
+0,https://www.amazon.com/dp/B08VGWFB6W,B08VGWFB6W,Free Facebook Promotion Guide: Generate unlimited leads and sales without spending a dime on advertisements using Facebook,Gaurav Bhadani,Kindle,"Jan 29, 2021",
+0,https://www.amazon.com/dp/B08VGRRJS8,B08VGRRJS8,Being Happy On The Way To Achievement: Discover how you can achieve your goals in a way that is - not only achievable - but also enjoyable. Find balance and hit your goals even faster! Enjoy the pro,Alvaro Gutierrez,Kindle,"Jan 29, 2021",
+0,https://www.amazon.com/dp/B0D9G38Z5C,B0D9G38Z5C,The Tech Innovator's Playbook: Using the 12 Dimensions of Innovation: Your Roadmap to Sustainable Success in a Changing Tech World,Amy-Renee Hovorka,Kindle,"Mar 17, 2025",
+0,https://www.amazon.com/dp/B08VG3LP7B,B08VG3LP7B,"Computer Vision – ECCV 2020 Workshops: Glasgow, UK, August 23–28, 2020, Proceedings, Part III (Lecture Notes in Computer Science Book 12537)",Adrien Bartoli,Paperback,"Jan 29, 2021",Springer
+0,https://www.amazon.com/dp/B08VG2WXLZ,B08VG2WXLZ,"Smart Cities, Green Technologies and Intelligent Transport Systems: 8th International Conference, SMARTGREENS 2019, and 5th International Conference, ... Computer and Information Science Book 1217)",Markus Helfert,Paperback,"Jan 29, 2021",
+0,https://www.amazon.com/dp/B08VFGJYZJ,B08VFGJYZJ,"Make $50-$350 With This Simple One Service Online: Learn How To Offer 1 Service That Is HIGH in Demand And Will Pay You At Leat $50 Day in, Day Out. Make ... Online From Home. Profitable Side Hustle",Alvaro Gutierrez,Kindle,"Jan 29, 2021",
+0,https://www.amazon.com/dp/B08VFDSJ5Y,B08VFDSJ5Y,"How To Easily Rank On Google: The SIMPLE 3 Step Formula To Help You Rank Your Website On Page 1 In Google. NO Tricks - NO Hacks Involved, Only Common Sense!",Alvaro Gutierrez,Kindle,"Jan 29, 2021",
+0,https://www.amazon.com/dp/B08VD8T7GZ,B08VD8T7GZ,"6GN for Future Wireless Networks: Third EAI International Conference, 6GN 2020, Tianjin, China, August 15-16, 2020, Proceedings (Lecture Notes of the ... ... Telecommunications Engineering Book 337)",Xiaofei Wang,Paperback,"Jan 28, 2021",Springer
+0,https://www.amazon.com/dp/B08VD724QZ,B08VD724QZ,"Bridges and Mediation in Higher Distance Education: Second International Workshop, HELMeTO 2020, Bari, BA, Italy, September 17–18, 2020, Revised ... Computer and Information Science Book 1344)",Laura Sara Agrati,Paperback,"Jan 28, 2021",Springer
+0,https://www.amazon.com/dp/B08VFRXWR2,B08VFRXWR2,"Cloud Analytics with Microsoft Azure: Transform your business with the power of analytics in Azure, 2nd Edition",Has Altaiar,Paperback,"Jan 28, 2021",Packt Publishing
+0,https://www.amazon.com/dp/B08VFFMRXV,B08VFFMRXV,"7 Tips To Make Money On FIVERR (The Right Way): 7 Strategies To Help You Build A Business With Fiverr. Make Money Online From Home As A Fiverr Freelance, The Right Way",Alvaro Gutierrez,Kindle,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08VF96LK6,B08VF96LK6,AFFILIATE MARKETING GUIDE TO GETTING PROFITS,Manwlo D,Kindle,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08VDWMBHJ,B08VDWMBHJ,"Statistical Atlases and Computational Models of the Heart. M&Ms and EMIDEC Challenges: 11th International Workshop, STACOM 2020, Held in Conjunction with ... Notes in Computer Science Book 12592)",Esther Puyol Anton,Paperback,"Jan 28, 2021",Springer
+0,https://www.amazon.com/dp/B08VDT3B25,B08VDT3B25,"Advanced Hybrid Information Processing: 4th EAI International Conference, ADHIP 2020, Binzhou, China, September 26-27, 2020, Proceedings, Part II (Lecture ... Telecommunications Engineering Book 348)",Shuai Liu,Paperback,"Jan 28, 2021",Springer
+0,https://www.amazon.com/dp/B08VDTBRZM,B08VDTBRZM,"Families Under Construction: Parentage, Adoption, and Assisted Reproduction (Aspen Coursebook Series)",Susan Frelich Appleton,Paperback,"Jan 31, 2021",Aspen Publishing
+0,https://www.amazon.com/dp/B0C4PMFG7D,B0C4PMFG7D,"Technology, Innovation and Access to Justice",Siddharth Peter de Souza,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VCVDZVW,B08VCVDZVW,"Advances in Quantitative Ethnography: Second International Conference, ICQE 2020, Malibu, CA, USA, February 1-3, 2021, Proceedings (Communications in Computer and Information Science Book 1312)",Andrew R. Ruis,Paperback,"Jan 28, 2021",Springer
+0,https://www.amazon.com/dp/B08V8P7Q9Q,B08V8P7Q9Q,"Algorithms and Discrete Applied Mathematics: 7th International Conference, CALDAM 2021, Rupnagar, India, February 11–13, 2021, Proceedings (Lecture Notes in Computer Science Book 12601)",Apurva Mudgal,Paperback,"Jan 28, 2021",Springer
+0,https://www.amazon.com/dp/B08V1MV5N4,B08V1MV5N4,"Data Protection and Privacy, Volume 13: Data Protection and Artificial Intelligence (Computers, Privacy and Data Protection)",Dara Hallinan,Paperback,"Jan 28, 2021",Hart Publishing
+0,https://www.amazon.com/dp/B08T8JQHSL,B08T8JQHSL,Beginner's Guide to SEO: Gain an understanding of how to use search engine optimization to grow your site's search engine traffic. (Business Book 14),Edward  Jones,Kindle,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08T7GK82X,B08T7GK82X,How To increase Traffic to Your Website for beginners: Learn how you can drive lots of targeted traffic without doing any effort or SEO for your website and blast your sales. (Business Book 13),Edward Jones,Kindle,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08VN758C6,B08VN758C6,Have you ever been falsely accused of a sex crime?,melissa combs,Kindle,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VJHHWNN,B08VJHHWNN,"DEMOCRACY ,DEVELOPMENT AND THE LAW: THE CORRELATION INVOLVING DEMOCRACY,DEVELOPMENT AND THE LAW",CHARLES KUNGWENGWE,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VHX6YNX,B08VHX6YNX,CETA's Investment Chapter: A Rule of Law Perspective (European Yearbook of International Economic Law 13),Kriton Dionysiou,Paperback,"Jan 31, 2021",Springer
+0,https://www.amazon.com/dp/B0824CMTGC,B0824CMTGC,Interstellar Jurisdiction,Brian A. Risman,Kindle,"Nov 28, 2019",
+0,https://www.amazon.com/dp/B08VCFH33D,B08VCFH33D,Learn to Make Money with Keywords,Arthur Spencer,Kindle,"Jan 27, 2021",
+0,https://www.amazon.com/dp/1543820522,1543820522,"Families Under Construction: Parentage, Adoption, and Assisted Reproduction (Aspen Casebook Series)",Susan Frelich Appleton,Paperback,"Jan 31, 2021",Aspen Publishing
+0,https://www.amazon.com/dp/B08VWL1JDF,B08VWL1JDF,I will pass my Human Resource Management exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VWL1JBL,B08VWL1JBL,I will pass my Professional Practice in Psychology exam: Lined Notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VVMHWL9,B08VVMHWL9,"Three Volumes - The Very Best of Joe Bruno's Mobsters: Bonnie Parker, Crazy Joe Gallo, Whitey Bulger",JOE BRUNO,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VVF1VPL,B08VVF1VPL,Stop Doubting Your Self. Study Hard and Pass Your Marriage and Family Therapist Exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VVF1VPK,B08VVF1VPK,Stop Doubting Your Self. Study Hard and Pass Your Emergency Medical Technician Exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VVF1VPC,B08VVF1VPC,Stop Doubting Your Self Study Hard and Pass Your Chemical Dependency Counselor Exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VVC26CM,B08VVC26CM,Stop Doubting Your Self. Study Hard and Pass Your Occupational Therapy Exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VVC269L,B08VVC269L,Stop Doubting Your Self. Study Hard and Pass Your Dietitian Nutritionist Exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VVBFKJC,B08VVBFKJC,Stop Doubting Your Self Study Hard and Pass Your Water Operator Exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VV9SWRF,B08VV9SWRF,I will pass my Clinical Social Worker exam: Lined Notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B0CNS2V1KL,B0CNS2V1KL,"""ONE TRUTH IS CLEAR, WHATEVER IS, IS RIGHT”: The History, Indeterminacy, and Ideological Significance of the Doctrine of Economic Duress",Frank C. Huntington,Paperback,"Nov 21, 2023",
+0,https://www.amazon.com/dp/B0FR21JQHD,B0FR21JQHD,New Jersey Statutes Title 17B - Insurance 2025,New Jersey State Legislature,Paperback,"Sep 11, 2025",
+0,https://www.amazon.com/dp/B08VV6VL7J,B08VV6VL7J,I will pass my Mortgage Licensing exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VV6VL44,B08VV6VL44,Stop Doubting Your Self. Study Hard and Pass Your Industrial Hygienist Exam: Lined Notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VV59FGY,B08VV59FGY,Stop Doubting Your Self. Study Hard and Pass Your Management Accountant Exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VV59FDL,B08VV59FDL,I will pass my Project Management exam: Lined Notebook,anasshm publishing,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VV25B3H,B08VV25B3H,It's a Nonprofit Management thing. You wouldn't understand: Lined Notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VTZ6P5F,B08VTZ6P5F,Stop Doubting Your Self Study Hard and Pass Your Nursing School Entrance Exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VTZ6P3J,B08VTZ6P3J,I will pass my Family Nurse exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VTZ6P1Q,B08VTZ6P1Q,Stop Doubting Your Self. Study Hard and Pass Your Coding Specialist Exam: Lined Notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VTY96NL,B08VTY96NL,I will pass my Patent exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VTY96KL,B08VTY96KL,I will pass my Food Protection exam: Lined Notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VTXHSYB,B08VTXHSYB,Stop Doubting Your Self Study Hard and Pass Your Project Management Exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VTXHSW9,B08VTXHSW9,Stop Doubting Your Self. Study Hard and Pass Your Behavior Technician Exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VTWDXGF,B08VTWDXGF,I will pass my Chemical Dependency Counselor exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VTWDXG5,B08VTWDXG5,Stop Doubting Your Self. Study Hard and Pass Your Behavior Analyst Exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VTWDXC8,B08VTWDXC8,Stop Doubting Your Self. Study Hard and Pass Your Health Information Technician Exam: Lined Notebook,anasshm publishing,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VTWC2WD,B08VTWC2WD,I will pass my Central Service Technician exam: Lined Notebook education notebook,anasshm publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRFYBCG,B08VRFYBCG,Eat the Rich Tile Notebook,Gogo Moonie,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRFY9WM,B08VRFY9WM,Stop Thinking Start doing: 90 Daily Diet Food Journal Weight Loss Planner. Log Book & Meal Preparation to Track Your Diets Goals,Laurel Paige,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRCWXZY,B08VRCWXZY,"Wedding Guest Book: Matte Paperback Cover 100 PAGES, 8.25”x6”",Charming Chammaree,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VFFPLFQ,B08VFFPLFQ,"Cahier Dactivités Multi-Jeux Pour Adultes: Livre de grilles de Sudoku Facile, Medium, Difficile et leurs solutions. Plus de 100 Énigmes logiques 6x9 qui entraînent la mémoire de vos enfants",Sweet brofed,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VF9HRB5,B08VF9HRB5,"Cahier Dactivités Multi-Jeux Pour Adultes: Livre de grilles de Sudoku Facile, Medium, Difficile et leurs solutions. Plus de 100 Énigmes logiques 6x9 qui entraînent la mémoire de vos enfants",Sweet brofed,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/1982261676,1982261676,Kirksey,Judge Bill Swann,Paperback,"Jan 31, 2021",Balboa Press
+0,https://www.amazon.com/dp/1912687623,1912687623,A Practical Guide to Hoarding and Mental Health for Housing Lawyers,Rachel Coyle,Paperback,"Jan 31, 2021",Law Brief Publishing
+0,https://www.amazon.com/dp/B08VCMWR82,B08VCMWR82,The Anneke Jans Legacy,L. Bernard Barker,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRBWZJJ,B08VRBWZJJ,Notary Log book: Notary Public Log book : Notary records Log Diary | 6x9 | 120 pages | notary entries | Document Type & Date | And many more check the description .,Chrestina Pub,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/1977230814,1977230814,Expert Design Witness 101,Fidsa Cooper C Woodring,Paperback,"Jan 30, 2021",Outskirts Press
+0,https://www.amazon.com/dp/B08W38SCHT,B08W38SCHT,Vegans Coloring Book: Plant Power: Humorous Sarcastic Sayings Colouring Gift Book For Adults (Vegans Snarky Gag Gift Book),Black feather Stationery,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRKK3J9,B08VRKK3J9,Real Leaders Lead With Love Notebook/Journal perfect gift for Managers: Real Leaders Lead With Love Notebook/Journal perfect gift for Managers,UHO Publishers,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRHJNBD,B08VRHJNBD,Notary Logbook: Notary Log book : Public Notary Log Diary | 6x9 | 120 pages | notary entries | Document Type & Date | Notarization Type | ID ... | Thumbprint | and many more informations.,Notarial pub,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRHJN32,B08VRHJN32,"Make Your Own Magic: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRDYBLG,B08VRDYBLG,"Make Your Own Magic: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRDT6RL,B08VRDT6RL,"Sign Of The Time: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRDT6MX,B08VRDT6MX,"Make Your Own Magic: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRDRVPZ,B08VRDRVPZ,"Taste Of Freedom: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRBWZBC,B08VRBWZBC,"Sign Of The Time: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRBWZ99,B08VRBWZ99,"Make Your Own Magic: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VRBV665,B08VRBV665,Real Leaders Lead With Love Notebook/Journal perfect gift for Managers: Real Leaders Lead With Love Notebook/Journal perfect gift for Managers,UHO Publishers,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VR8R1CD,B08VR8R1CD,"Make Your Own Magic: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VR8R181,B08VR8R181,"Make Your Own Magic: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VR8M24G,B08VR8M24G,"Take My Hand: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/B08VR7QKMT,B08VR7QKMT,Do not forget the most important: The best notebook you could keep in your locker,peace publishing,Paperback,"Jan 30, 2021",Independently published
+0,https://www.amazon.com/dp/9811510768,9811510768,National Human Rights Institutions in Southeast Asia: Selected Case Studies,James Gomez,Paperback,"Jan 30, 2021",Palgrave Macmillan
+0,https://www.amazon.com/dp/3030354288,3030354288,Space in Support of Human Rights (Studies in Space Policy),Annette Froehlich,Paperback,"Jan 30, 2021",Springer
+0,https://www.amazon.com/dp/3030345580,3030345580,"Digitising Democracy: On Reinventing Democracy in the Digital Era - A Legal, Political and Psychological Perspective",Volker Boehme-Neßler,Paperback,"Jan 30, 2021",
+0,https://www.amazon.com/dp/0814250076,0814250076,"CONTROLLING VICE: REGULATING BROTHEL PROSTITUTION IN ST. PAUL, 1865–1883 (HISTORY CRIME & CRIMINAL JUS)",JOEL BEST,Paperback,"Jan 29, 2021",Ohio State University Press
+0,https://www.amazon.com/dp/0814257224,0814257224,LITIGATION AS LOBBYING: REPRODUCTIVE HAZARDS & INTEREST AGGREGATION,JULIANNA S. GONEN,Paperback,"Jan 29, 2021",Ohio State University Press
+0,https://www.amazon.com/dp/B08VLQKCF8,B08VLQKCF8,"dad I want to hear your story: What I Want You to Know About Me and My Life, A Guided Memory Journal to Share The Stories, Memories and Moments That Have Shaped Dad's Life",aymane nadi,Paperback,"Jan 29, 2021",
+0,https://www.amazon.com/dp/0814207480,0814207480,Coalition Government: Multiparty Politics in Europe's Regional,WILLIAM M. DOWNS,Paperback,"Jan 29, 2021",Ohio State University Press
+0,https://www.amazon.com/dp/0814207375,0814207375,"COURTS AND COMMERCE: GENDER, LAW, AND THE MARKET ECONOMY IN COLONIAL NEW YORK (HISTORICAL PERSP BUS ENTERPRIS)",DEBORAH ROSEN,Paperback,"Jan 29, 2021",Ohio State University Press
+0,https://www.amazon.com/dp/B08VMJDX88,B08VMJDX88,"The World Is Mine: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 29, 2021",Independently published
+0,https://www.amazon.com/dp/B08VM3RG6Q,B08VM3RG6Q,Notary Logbook: Official Notary Public Journal with 472 Entries,Color Publishing,Paperback,"Jan 29, 2021",Independently published
+0,https://www.amazon.com/dp/B08VM1DFPJ,B08VM1DFPJ,"*I'm Sorry to Leave You*: Incase of Emergency & Will Planning Workbook ~ Estate Plan, Assets Overview, DNR, Funeral Plan (Final Wishes Organizer, 8.5x11)",Peace of Mind and Heart Planners,Paperback,"Jan 29, 2021",
+0,https://www.amazon.com/dp/B08VLWLL1Q,B08VLWLL1Q,"Love Is In The Air: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 29, 2021",
+0,https://www.amazon.com/dp/B08VLT1G1R,B08VLT1G1R,"Never Alone: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 29, 2021",
+0,https://www.amazon.com/dp/B08VLPHQ7Y,B08VLPHQ7Y,Composition Notebook: Wide Ruled Paper Notebook Journal | Nifty Wide Blank Lined Workbook for Teens Kids Students Girls for Home School College,Alice S. Wright Publishing,Paperback,"Jan 29, 2021",Independently published
+0,https://www.amazon.com/dp/9975347584,9975347584,Compensation for Wrongful Convictions in Canada,Myles Frederick McLellan,Paperback,"Jan 29, 2021",Eliva Press
+0,https://www.amazon.com/dp/3631843917,3631843917,Gender Discrimination for Religious Reasons in Islamic Countries and International Human Rights Treaties (Europäische Hochschulschriften Recht),Mosavi,Paperback,"Jan 29, 2021",Peter Lang
+0,https://www.amazon.com/dp/3030352706,3030352706,International Marine Mammal Law,Nikolas Sellheim,Paperback,"Jan 29, 2021",
+0,https://www.amazon.com/dp/1911611399,1911611399,The Manager's Data Protection Duties,Paul Lambert,Paperback,"Jan 29, 2021",Clarus Press
+0,https://www.amazon.com/dp/1867331179,1867331179,Cost Plus Contract A Complete Guide,Gerardus Blokdyk,Paperback,"Jan 29, 2021",5STARCooks
+0,https://www.amazon.com/dp/1777573904,1777573904,Marriage and Divorce: Comparative Study of Canadian and Shariah Law,Wafaa Talha,Paperback,"Jan 29, 2021",9781777573904
+0,https://www.amazon.com/dp/1526518392,1526518392,Drug Offences in Ireland,Garnet Orange,Paperback,"Jan 29, 2021",
+0,https://www.amazon.com/dp/081420709X,081420709X,Cheap Seats: The Democratic Party's Advantage in U.S. House Elections,James E. Campbell,Paperback,"Jan 29, 2021",Ohio State University Press
+0,https://www.amazon.com/dp/1509944001,1509944001,Citizenship in Africa: The Law of Belonging,Bronwen Manby,Paperback,"Jan 28, 2021",Hart Publishing
+0,https://www.amazon.com/dp/B0GWH8HZP4,B0GWH8HZP4,"INTRODUCTION TO ARBITRATION: A Practical Guide to Commercial Arbitration, Dispute Resolution, and Legal Practice",P. O. NWANKWO MCIARB,Paperback,"Apr 7, 2026",Independently published
+0,https://www.amazon.com/dp/B08W3K8PN9,B08W3K8PN9,"Scattergories Refill Sheets: 6x9 inch 200 Pages Scattergories Board Game Refills Pad, Score Sheets",wafeex press publications,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B09KNCWYJC,B09KNCWYJC,"Just A Boy Who Loves Dinosaurs: A 200 Page, 100 Sheet, 6X9 College Ruled Notebook Journal With A Triceratops Set On A Vintage Sunset Background",Chomper Designs,Paperback,"Oct 29, 2021",Independently published
+0,https://www.amazon.com/dp/B08VWL1JHS,B08VWL1JHS,Daily Thoughts: My Cavapoo: A Coloring Book Volume 3,Brightview Publishing,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08WYDVR12,B08WYDVR12,Agricultural Word Search,Dr. Michael Stachiw,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VBS43D2,B08VBS43D2,Hard Calcudoku Puzzles 6x6 Book for Adults: 200 Hard Calcudoku For Advanced Players,Alena Gurin,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B08VTWC2TL,B08VTWC2TL,"BLOWJOBS ARE FOR LIFE NOT JUST FOR VALENTINE'S: Funny Inappriopiate Valentine's Day Notebook Gag Gift for Girlfriend, Wife, Fiancee, Friend | Humorous and Naughty Anniversary Journal for Her",Kath Kath D'Madison,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VV59F6S,B08VV59F6S,"Will You Hold My Dress While I Pee: Funny Maid Of Honor Planning Notebook - Wedding Checklist & Guide, Bridesmaid Duty Tracker & Organizer",Katherine Floko,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08VBH5VDZ,B08VBH5VDZ,STR8TS 7 x 7 - HARD - 300 PUZZLES WITH ANSWERS,Mister Riddle,Paperback,"Jan 31, 2021",Independently published
+0,https://www.amazon.com/dp/B08YDNLS81,B08YDNLS81,Future Lawyer: Notebook,Law Essentials,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08VMBRT8M,B08VMBRT8M,"All You Need Is One Hand To Hold: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08VM1DDYK,B08VM1DDYK,"Yin Yang: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08VLWRZB1,B08VLWRZB1,Notary Journal: Notary Log Book | Public Notary Records Book | 8.5x11 | 2 Entries per page with records numbered,FOLIR Press,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VLVZ4S8,B08VLVZ4S8,Notary journal: A Public Notary Records Log Book with 2 Entries Per Page - 8.5x11,FOLIR Press,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VLTD1G3,B08VLTD1G3,"All You Need Is One Hand To Hold: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VKJXS8F,B08VKJXS8F,THE ANTS REVOLUTION: POEMS AND HOLY HUMOR,Samson Elias,Kindle,"Jan 31, 2021",
+0,https://www.amazon.com/dp/B0GX34QLRN,B0GX34QLRN,The Ultimate Guide to Not Dying in a Zombie Apocalypse: Common Sense Solutions for an Uncommonly Bad Situation,Andrew Ozerov,Kindle,"Apr 15, 2026",
+0,https://www.amazon.com/dp/B08VLR92SQ,B08VLR92SQ,Notary Records Journal: A Modern Notary journal To Log Notarial Acts - Sequential Pages And Record Numbers - 2 Entries per page,FOLIR Press,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VLR92JT,B08VLR92JT,"Notary Public Logbook: Notary Log Book, Notary Journal, Notary Records Journal",Julia Dream,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08VLPHPN3,B08VLPHPN3,"More Than Words: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VLMFL26,B08VLMFL26,Notary Records Journal: Modern Notary Journal | Notary Receipt Book | Notorial Acts Events Logbook | 2 Entries Per Page in Sequential Pages,FOLIR Press,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VLMFKR7,B08VLMFKR7,"Protect What You Love: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08VLLRWVM,B08VLLRWVM,"Home Office: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VLLRWLG,B08VLLRWLG,"Touch Magic: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VLLRSBT,B08VLLRSBT,"Yin Yang: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VLLRS4R,B08VLLRS4R,"Yin Yang: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VLKKQWG,B08VLKKQWG,"World is Full Of Magic: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VLGJVBJ,B08VLGJVBJ,"Why So Serious: Notebook for Drawing, Writing, Painting, Sketching or Doodling (Unruled/Unlined/Plain Notebook)",RUST ON THE ROOF,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08VLGJVB6,B08VLGJVB6,Eliza's Notebook Don't Touch It: handwriting practice paper 100 blank writing pages|eliza hamilton costume girls|Personalised Journal Notebook for Girls Named Eliza,Kevin Merse,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08VLGJTCN,B08VLGJTCN,Eliza's Notebook Don't Touch It: handwriting practice paper 100 blank writing pages|eliza hamilton costume girls|Personalised Journal Notebook for Girls Named Eliza,Kevin Merse,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VLG63DG,B08VLG63DG,"Mon Temps Avec Dieu: Carnet de Prière, de Reconnaissance et d'Adoration",Sweet brofed,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VFTYZJX,B08VFTYZJX,"Mon Temps Avec Dieu: Carnet de Prière, de Reconnaissance et d'Adoration",Sweet makihs,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08VDJP7W2,B08VDJP7W2,"My Diet Starts: A Daily Food and Exercise Journal to Help You Become the Best Version of Yourself, ( 90 Day Meal and Activity Tracker)",Mary Young,Paperback,"Jan 28, 2021",Independently published
+0,https://www.amazon.com/dp/B08VCQP9RQ,B08VCQP9RQ,"Dolphin Coloring Book For Girls: A Wonderful and Playful Sea Creature Coloring Book Specially For Girls, A Coloring Book For Relaxation and Inspiration, Funny Gift Idea For Kids And Toddlers Ages 4-9.",Grampus Press Publishing,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/6203306835,6203306835,Implications of Copyright Laws on Free Access to Information,Emmanuel Agherario,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/6203263753,6203263753,OHADA CRIMINAL LAW: THE HARMONISATION OF A CRIMINAL LAW OF THE OHADA BUSINESS IN THE STATES MEMBERS,Disseyi Godwin PALOUKI,Paperback,"Jan 28, 2021",Our Knowledge Publishing
+0,https://www.amazon.com/dp/620326234X,620326234X,Polygamy in family property law: the (...),H. Kuassi Deckon,Paperback,"Jan 28, 2021",Our Knowledge Publishing
+0,https://www.amazon.com/dp/6203261211,6203261211,Paradoxical attractors: Miscegenation versus the principle of the excluded third party,Rodrigo Pérez Gil,Paperback,"Jan 28, 2021",Our Knowledge Publishing
+0,https://www.amazon.com/dp/6203202061,6203202061,The implementation of VAT withholding refund and its related problems in Ethiopia,Minyichel Baye,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/6203196193,6203196193,Critical Analysis on the Modern Definition of Criminal Intention,Bernard William Mbalati,Paperback,"Jan 28, 2021",LAP LAMBERT Academic Publishing
+0,https://www.amazon.com/dp/6203041424,6203041424,Impact of the ATAD Directive on National Tax Legislations,Matteo Cvenček,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/3030365123,3030365123,"Conflict Prevention in the UN´s Agenda 2030: Development, Peace, Justice and Human Rights",Bertrand Ramcharan,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/1784461725,1784461725,Cohabitation: Division of Property on Relationship Breakdown,Stephen Parker,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/1509944028,1509944028,Criminal Law Reform Now: Proposals & Critique,J J Child,Paperback,"Jan 28, 2021",Hart Publishing
+0,https://www.amazon.com/dp/3030657388,3030657388,"Advances in Optimization and Applications: 11th International Conference, OPTIMA 2020, Moscow, Russia, September 28 – October 2, 2020, Revised ... in Computer and Information Science)",Nicholas Olenev,Paperback,"October 2, 2020",
+0,https://www.amazon.com/dp/9813364629,9813364629,"Modeling, Machine Learning and Astronomy: First International Conference, MMLA 2019, Bangalore, India, November 22–23, 2019, Revised Selected Papers ... in Computer and Information Science)",Snehanshu Saha,Paperback,"Jan 13, 2021",
+0,https://www.amazon.com/dp/3030645797,3030645797,"Machine Learning, Optimization, and Data Science: 6th International Conference, LOD 2020, Siena, Italy, July 19–23, 2020, Revised Selected Papers, ... Applications, incl. Internet/Web, and HCI)",Giuseppe Nicosia,Paperback,"Jan 7, 2021",
+0,https://www.amazon.com/dp/9811524475,9811524475,"Statistical Modelling and Machine Learning Principles for Bioinformatics Techniques, Tools, and Applications (Algorithms for Intelligent Systems)",K. G. Srinivasa,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/3030682846,3030682846,"Information Technology and Systems: ICITS 2021, Volume 1 (Advances in Intelligent Systems and Computing, 1330)",Álvaro Rocha,Paperback,"Jan 31, 2021",Springer
+0,https://www.amazon.com/dp/3030682374,3030682374,"Computer Vision – ECCV 2020 Workshops: Glasgow, UK, August 23–28, 2020, Proceedings, Part V (Image Processing, Computer Vision, Pattern Recognition, and Graphics)",Adrien Bartoli,Paperback,"Jan 31, 2021",Springer
+0,https://www.amazon.com/dp/3030675130,3030675130,"IoT as a Service: 6th EAI International Conference, IoTaaS 2020, Xi’an, China, November 19–20, 2020, Proceedings (Lecture Notes of the Institute for ... and Telecommunications Engineering)",Bo Li,Paperback,"Jan 31, 2021",Springer
+0,https://www.amazon.com/dp/303067410X,303067410X,Robotics in Education: Methodologies and Technologies (Advances in Intelligent Systems and Computing),Wilfried Lepuschitz,Paperback,"Jan 31, 2021",
+0,https://www.amazon.com/dp/9811507929,9811507929,Proceeding of International Conference on Computational Science and Applications: ICCSA 2019 (Algorithms for Intelligent Systems),Subhash Bhalla,Paperback,"Jan 30, 2021",Springer
+0,https://www.amazon.com/dp/3030680274,3030680274,"Smart Cities, Green Technologies and Intelligent Transport Systems (Communications in Computer and Information Science)",Markus Helfert,Paperback,"Jan 30, 2021",Springer
+0,https://www.amazon.com/dp/3030671321,3030671321,Advances in Artificial Systems for Medicine and Education IV (Advances in Intelligent Systems and Computing),Zhengbing Hu,Paperback,"Jan 30, 2021",
+0,https://www.amazon.com/dp/3030670694,3030670694,"Computer Vision – ECCV 2020 Workshops: Glasgow, UK, August 23–28, 2020, Proceedings, Part III (Image Processing, Computer Vision, Pattern Recognition, and Graphics)",Adrien Bartoli,Paperback,"Jan 30, 2021",
+0,https://www.amazon.com/dp/3030665003,3030665003,"Progress in Intelligent Decision Science: Proceeding of IDS 2020 (Advances in Intelligent Systems and Computing, 1301)",Tofigh Allahviranloo,Paperback,"Jan 30, 2021",Springer
+0,https://www.amazon.com/dp/303034052X,303034052X,"Optimization of Power System Problems: Methods, Algorithms and MATLAB Codes (Studies in Systems, Decision and Control)",Mahmoud Pesaran Hajiabbas,Paperback,"Jan 30, 2021",
+0,https://www.amazon.com/dp/3030639401,3030639401,"6GN for Future Wireless Networks: Third EAI International Conference, 6GN 2020, Tianjin, China, August 15-16, 2020, Proceedings (Lecture Notes of the ... and Telecommunications Engineering)",Xiaofei Wang,Paperback,"Jan 29, 2021",
+0,https://www.amazon.com/dp/3030681068,3030681068,"Statistical Atlases and Computational Models of the Heart. M&Ms and EMIDEC Challenges (Image Processing, Computer Vision, Pattern Recognition, and Graphics)",Esther Puyol Anton,Paperback,"Jan 29, 2021",
+0,https://www.amazon.com/dp/3030678733,3030678733,"Advanced Hybrid Information Processing: 4th EAI International Conference, ADHIP 2020, Binzhou, China, September 26-27, 2020, Proceedings, Part II ... and Telecommunications Engineering)",Shuai Liu,Paperback,"Jan 29, 2021",
+0,https://www.amazon.com/dp/3030677877,3030677877,"Advances in Quantitative Ethnography: Second International Conference, ICQE 2020, Malibu, CA, USA, February 1-3, 2021, Proceedings (Communications in Computer and Information Science)",Andrew R. Ruis,Paperback,"Jan 29, 2021",Springer
+0,https://www.amazon.com/dp/3030407322,3030407322,"The Evolution of Complexity: Simple Simulations of Major Innovations (Emergence, Complexity and Computation)",Larry Bull,Paperback,"Jan 29, 2021",
+0,https://www.amazon.com/dp/303039817X,303039817X,"Environmental Software Systems. Data Science in Action: 13th IFIP WG 5.11 International Symposium, ISESS 2020, Wageningen, The Netherlands, February ... in Information and Communication Technology)",Ioannis N. Athanasiadis,Paperback,"Jan 29, 2021",
+0,https://www.amazon.com/dp/303038750X,303038750X,"Challenges and Trends in Multimodal Fall Detection for Healthcare (Studies in Systems, Decision and Control)",Hiram Ponce,Paperback,"Jan 29, 2021",Springer
+0,https://www.amazon.com/dp/1643681346,1643681346,"Fuzzy Systems and Data Mining VI: Proceedings of FSDM 2020 (Frontiers in Artificial Intelligence and Applications, 331)",Antonio J. Tallón-Ballesteros,Paperback,"Jan 28, 2021",SAGE Publications Ltd
+0,https://www.amazon.com/dp/1643681362,1643681362,"Machine Learning and Artificial Intelligence: Proceedings of MLIS 2020 (Frontiers in Artificial Intelligence and Applications, 332)",Antonio J. Tallón-Ballesteros,Paperback,"Jan 28, 2021",SAGE Publications Ltd
+0,https://www.amazon.com/dp/1643681427,1643681427,"Applications and Practices in Ontology Design, Extraction, and Reasoning (Studies on the Semantic Web (IOS Press))",Marilena Daquino,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/0367654652,0367654652,AI for Immunology (AI for Everything),Louis J. Catania,Paperback,"Jan 28, 2021",
+0,https://www.amazon.com/dp/B08VCJ8FF7,B08VCJ8FF7,Broker's Build: 2020 A Year in Which We Learned Plenty,Ben Sillem,Paperback,"Jan 29, 2021",Independently published
+0,https://www.amazon.com/dp/1867325535,1867325535,Trade Credit Insurance A Complete Guide - 2020 Edition,Gerardus Blokdyk,Paperback,"Jan 29, 2021",5STARCooks
+0,https://www.amazon.com/dp/B08TZ7DN8Z,B08TZ7DN8Z,"Rental Ledger Book: Income And Expenses Book Keeping Notebook For Rental, Landlord Rental Property Manager Journal, Rental Income Log Book, Rental Property Record Book",Designores Limited,Paperback,"Jan 24, 2021",
+0,https://www.amazon.com/dp/4431568921,4431568921,Co-patenting: An Analytic Tool for Cooperative Research and Development (Evolutionary Economics and Social Complexity Science),Hiroyasu Inoue,Paperback,"Jan 21, 2021",
+0,https://www.amazon.com/dp/B08T87YJ8Q,B08T87YJ8Q,French Ruled Graph Notebook: Seyes Grid French Ruled Graph Paper for French Ruling Calligraphy Writing (Handwriting Paper Grid System for Kids & Adults),Chester BW Justin,Paperback,"Jan 16, 2021",Independently published
+0,https://www.amazon.com/dp/3346286657,3346286657,A Comparative Study of Rural and Urban Customers of Life Insurance Products. With Special Reference to Latur District,Dr Balasaheb Chavan,Paperback,"Jan 7, 2021",Grin Verlag
+0,https://www.amazon.com/dp/B0GF3SMK96,B0GF3SMK96,"The AI System of Work: Architecting Work, Roles and Flows So AI Matters to P&L",Marco Diaz,Kindle,"Jan 5, 2026",
+0,https://www.amazon.com/dp/B08V4VZSCH,B08V4VZSCH,Machine Learning in Python,Robert Karamagi,Paperback,"Jan 26, 2021",
+0,https://www.amazon.com/dp/B08V8FSFXP,B08V8FSFXP,Brokers Build: 2020 A Year In Which We Learned Plenty,Ben Sillem,Paperback,"Jan 26, 2021",
+0,https://www.amazon.com/dp/B08T8LCSLC,B08T8LCSLC,Persuasive Selling for Relationship Driven Insurance Agents,Brian Ahearn,Kindle,"Jan 21, 2021","Influence PEOPLE, LLC"
+0,https://www.amazon.com/dp/B08TWDKBDS,B08TWDKBDS,"Emerging Trends in ICT for Sustainable Development: The Proceedings of NICE2020 International Conference (Advances in Science, Technology & Innovation)",Mohamed Ben Ahmed,Paperback,"Jan 23, 2021",Springer
+0,https://www.amazon.com/dp/B08TTPB5MR,B08TTPB5MR,Adversary-Aware Learning Techniques and Trends in Cybersecurity,Prithviraj Dasgupta,Paperback,"Jan 22, 2021",
+0,https://www.amazon.com/dp/B08TQY82XC,B08TQY82XC,"Collaborative Computing: Networking, Applications and Worksharing: 16th EAI International Conference, CollaborateCom 2020, Shanghai, China, October 16–18, ... Telecommunications Engineering Book 350)",Honghao Gao,Paperback,"Jan 21, 2021",Springer
+0,https://www.amazon.com/dp/B08TR1F689,B08TR1F689,Data Analytics in Bioinformatics: A Machine Learning Perspective,Rabinarayan Satpathy,Hardcover,"Jan 20, 2021",Wiley-Scrivener
+0,https://www.amazon.com/dp/B08TLXQQB8,B08TLXQQB8,"SOFSEM 2021: Theory and Practice of Computer Science: 47th International Conference on Current Trends in Theory and Practice of Computer Science, SOFSEM ... Notes in Computer Science Book 12607)",Tomáš Bureš,Paperback,"Jan 20, 2021",
+0,https://www.amazon.com/dp/B08TBHZG34,B08TBHZG34,"Multi-Agent-Based Simulation XXI: 21st International Workshop, MABS 2020, Auckland, New Zealand, May 10, 2020, Revised Selected Papers (Lecture Notes in Computer Science Book 12316)",Samarth Swarup,Paperback,"May 10, 2020",Springer
+0,https://www.amazon.com/dp/B08T9S5YXF,B08T9S5YXF,Understanding Semantics-Based Decision Support,Sarika Jain,Paperback,"Jan 18, 2021",Chapman and Hall/CRC
+0,https://www.amazon.com/dp/B08N5GF715,B08N5GF715,Democratization of Artificial Intelligence for the Future of Humanity,Chandrasekar Vuppalapati,Paperback,"Jan 18, 2021",
+0,https://www.amazon.com/dp/B08T8KZNXK,B08T8KZNXK,Comparison of Artificial Intelligence Methods to Enhance an Automated Peer-Evaluation Suite,Andrew Nelson,Paperback,"Jan 16, 2021",
+0,https://www.amazon.com/dp/B0FLK9VD2Z,B0FLK9VD2Z,Information Modelling and Knowledge Bases XXXII (Frontiers in Artificial Intelligence and Applications Book 333),Marina Tropmann-Frick,Paperback,"Jan 15, 2021",
+0,https://www.amazon.com/dp/B0FLK4N68Z,B0FLK4N68Z,Culturally Sustainable Social Robotics: Proceedings of Robophilosophy 2020 (Frontiers in Artificial Intelligence and Applications (IOS Press)),Marco Norskov,Paperback,"Jan 15, 2021",
+0,https://www.amazon.com/dp/B08T71LL8C,B08T71LL8C,"Practical Aspects of Declarative Languages: 23rd International Symposium, PADL 2021, Copenhagen, Denmark, January 18-19, 2021, Proceedings (Lecture Notes in Computer Science Book 12548)",José F. Morales,Paperback,"Jan 15, 2021",
+0,https://www.amazon.com/dp/B08T6PFW3T,B08T6PFW3T,"Machine Vision Inspection Systems, Machine Learning-Based Approaches (Machine Vision Inspection Systems, Volume 2)",Muthukumaran Malarvel,Hardcover,"Jan 14, 2021",
